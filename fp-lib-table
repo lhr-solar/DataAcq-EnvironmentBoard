@@ -6,4 +6,5 @@
   (lib (name "UTSVT_Passive")(type "KiCad")(uri "${KIPRJMOD}/UTSVT-KiCadLibraries/UTSVT_Passive.pretty")(options "")(descr ""))
   (lib (name "UTSVT_Power")(type "KiCad")(uri "${KIPRJMOD}/UTSVT-KiCadLibraries/UTSVT_Power.pretty")(options "")(descr ""))
   (lib (name "UTSVT_Special")(type "KiCad")(uri "${KIPRJMOD}/UTSVT-KiCadLibraries/UTSVT_Special.pretty")(options "")(descr ""))
+  (lib (name "SamacSys_Parts")(type "KiCad")(uri "${KIPRJMOD}/Custom-KiCadLibraries/SamacSys_Parts.pretty")(options "")(descr ""))
 )
