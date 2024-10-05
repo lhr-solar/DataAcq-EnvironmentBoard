@@ -1,0 +1,16 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "bc5fb1f8-c603-414b-89d1-18cc156ddb66")
+	(paper "A4")
+	(title_block
+		(title "DataAcq-EnvironmentBoard")
+	)
+	(lib_symbols)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
