@@ -2360,6 +2360,16 @@
 	)
 	(wire
 		(pts
+			(xy 132.08 162.56) (xy 144.78 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08903a9f-523c-4f33-9e8e-527f41556e16")
+	)
+	(wire
+		(pts
 			(xy 53.34 163.83) (xy 64.77 163.83)
 		)
 		(stroke
@@ -2700,6 +2710,16 @@
 	)
 	(wire
 		(pts
+			(xy 137.16 157.48) (xy 144.78 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9fc9f460-6303-41fa-a93b-6ece855407c4")
+	)
+	(wire
+		(pts
 			(xy 88.9 85.09) (xy 127 85.09)
 		)
 		(stroke
@@ -2860,6 +2880,16 @@
 	)
 	(wire
 		(pts
+			(xy 135.89 165.1) (xy 144.78 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d4c359ba-185b-4641-814f-e84aaee968b0")
+	)
+	(wire
+		(pts
 			(xy 127 87.63) (xy 111.76 87.63)
 		)
 		(stroke
@@ -2897,6 +2927,16 @@
 			(type default)
 		)
 		(uuid "e16ba8d6-ca10-43b7-9c27-450b91506484")
+	)
+	(wire
+		(pts
+			(xy 137.16 160.02) (xy 144.78 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1bb22d4-fbcc-4cda-a1d9-c78a0bf40c60")
 	)
 	(wire
 		(pts
@@ -3146,6 +3186,17 @@
 		)
 		(uuid "168e8129-6bea-411c-b0c6-6d313454ab31")
 	)
+	(label "CAN_H"
+		(at 137.16 160.02 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2f076a07-afdb-4da0-ba9e-b6ebee791133")
+	)
 	(label "I2C1_SDA"
 		(at 53.34 151.13 0)
 		(fields_autoplaced yes)
@@ -3200,6 +3251,17 @@
 			(justify left bottom)
 		)
 		(uuid "54118c33-aae8-438b-bbe2-12865c3eacb7")
+	)
+	(label "+12V_In"
+		(at 135.89 165.1 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "845871e5-ced9-4ff2-a386-1e9795324ed1")
 	)
 	(label "+12V_In"
 		(at 53.34 143.51 0)
@@ -3289,6 +3351,83 @@
 		)
 		(uuid "edaa46a8-4329-43f1-8374-2f23e1e647d7")
 	)
+	(label "CAN_L"
+		(at 137.16 157.48 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f5013f57-8477-4939-b5e9-a1514c89dd4f")
+	)
+	(symbol
+		(lib_id "power:GNDA")
+		(at 222.25 107.95 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "13c9b5c9-8093-45b8-a1f6-df3610c2acc7")
+		(property "Reference" "#PWR06"
+			(at 222.25 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDA"
+			(at 222.25 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 222.25 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 222.25 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
+			(at 222.25 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2fda18a3-2239-427e-962b-729cef888e46")
+		)
+		(instances
+			(project "DataAcq-EnvironmentBoard"
+				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
+					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
 	(symbol
 		(lib_id "power:GND")
 		(at 111.76 104.14 0)
@@ -3350,6 +3489,148 @@
 			(project "DataAcq-EnvironmentBoard"
 				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
 					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 132.08 162.56 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "20626d2d-ec08-4762-98fd-c1e6e9498e92")
+		(property "Reference" "#PWR07"
+			(at 125.73 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 128.27 162.5599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 132.08 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.08 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 132.08 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "018ab3f2-2d6f-4293-ad12-779a9d6def1b")
+		)
+		(instances
+			(project "DataAcq-EnvironmentBoard"
+				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
+					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 149.86 160.02 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "29c4e275-1686-4d51-b73b-4349f27b0056")
+		(property "Reference" "J1"
+			(at 151.13 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CAN Output"
+			(at 144.272 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 149.86 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 149.86 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 149.86 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "7ef2c891-9aab-4cef-bc86-2a31f017535a")
+		)
+		(pin "1"
+			(uuid "f908f2c4-7aed-4d9b-a3c8-1a973410d22b")
+		)
+		(pin "3"
+			(uuid "20498e8c-3a4d-4b77-9e1c-aac55da19a35")
+		)
+		(pin "4"
+			(uuid "0e79425a-f1ed-4356-8d89-1f8ea3ada4d8")
+		)
+		(instances
+			(project "DataAcq-EnvironmentBoard"
+				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
+					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -3777,10 +4058,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "5e76deff-ed92-4afa-8ce7-4136493894ee")
 		(property "Reference" "U3"
-			(at 213.36 90.1699 0)
+			(at 231.394 85.344 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3789,7 +4069,7 @@
 			)
 		)
 		(property "Value" "LMT87DCK"
-			(at 213.36 92.7099 0)
+			(at 233.68 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4338,10 +4618,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "945b4fd8-e801-47be-9368-7018012ffd65")
 		(property "Reference" "U1"
-			(at 62.23 90.1699 0)
+			(at 48.514 84.836 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4350,7 +4629,7 @@
 			)
 		)
 		(property "Value" "SHT45"
-			(at 62.23 92.7099 0)
+			(at 48.26 98.044 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4475,72 +4754,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 200.66 74.93 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a4e9aefd-de82-4856-bf8b-77b98b5a8a5a")
-		(property "Reference" "#PWR07"
-			(at 200.66 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 200.66 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 200.66 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 200.66 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 200.66 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b9b0f5fb-1c6e-42bb-a2c0-5bbd18712108")
-		)
-		(instances
-			(project "DataAcq-EnvironmentBoard"
-				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
-					(reference "#PWR07")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 88.9 90.17 0)
 		(unit 1)
@@ -4605,6 +4818,72 @@
 			(project "DataAcq-EnvironmentBoard"
 				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
 					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VDDA")
+		(at 200.66 74.93 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bc319fe5-88b1-484f-9480-2ffd5a417d1f")
+		(property "Reference" "#PWR015"
+			(at 200.66 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VDDA"
+			(at 200.6601 71.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 200.66 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 200.66 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VDDA\""
+			(at 200.66 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "440e2ace-4d66-4592-8a6a-be2380a38ff7")
+		)
+		(instances
+			(project "DataAcq-EnvironmentBoard"
+				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -4896,8 +5175,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "CAN Connector"
-			(at 142.748 151.13 0)
+		(property "Value" "CAN Input"
+			(at 145.034 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5024,72 +5303,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 222.25 107.95 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e516684d-5750-4f41-8b4e-ea2c9468abce")
-		(property "Reference" "#PWR06"
-			(at 222.25 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 222.25 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 222.25 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 222.25 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 222.25 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "006d41a6-0733-4f0a-8627-58eff6c77214")
-		)
-		(instances
-			(project "DataAcq-EnvironmentBoard"
-				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
-					(reference "#PWR06")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "SamacSys_Parts:FS3000-1005")
 		(at 127 82.55 0)
 		(unit 1)
@@ -5097,10 +5310,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "ec6d1f74-0ce4-4654-a822-69e39d17fcdc")
 		(property "Reference" "U2"
-			(at 140.97 74.93 0)
+			(at 149.86 78.486 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5108,7 +5320,7 @@
 			)
 		)
 		(property "Value" "FS3000-1005"
-			(at 140.97 77.47 0)
+			(at 141.224 99.314 0)
 			(effects
 				(font
 					(size 1.27 1.27)
