@@ -478,7 +478,7 @@
         "name": "PWR/GND",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.5,
+        "track_width": 0.35,
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
@@ -489,7 +489,16 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "PWR/GND",
+        "pattern": "GND"
+      },
+      {
+        "netclass": "PWR/GND",
+        "pattern": "+12V_In"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
