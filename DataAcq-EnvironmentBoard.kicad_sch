@@ -4635,6 +4635,15 @@
 				(hide yes)
 			)
 		)
+		(property "P/N" "436500244"
+			(at 191.77 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "7ef2c891-9aab-4cef-bc86-2a31f017535a")
 		)
@@ -4703,6 +4712,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 196.85 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "C0805C104M5RACTU"
 			(at 196.85 57.15 0)
 			(effects
 				(font
@@ -4781,6 +4799,15 @@
 				(hide yes)
 			)
 		)
+		(property "P/N" "C0805C105K5PACTU"
+			(at 250.19 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "371eee8c-9a23-41b8-ad8d-eafefda3128b")
 		)
@@ -4843,6 +4870,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 170.18 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "C0805C104M5RACTU"
 			(at 170.18 59.69 0)
 			(effects
 				(font
@@ -5031,7 +5067,7 @@
 				)
 			)
 		)
-		(property "Value" "800"
+		(property "Value" "1k"
 			(at 242.57 64.516 90)
 			(effects
 				(font
@@ -5058,6 +5094,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 242.57 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "CRCW08051K00FKEAC"
 			(at 242.57 62.23 0)
 			(effects
 				(font
@@ -5270,6 +5315,15 @@
 				(hide yes)
 			)
 		)
+		(property "P/N" "C0805C105K5PACTU"
+			(at 158.75 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9ee97951-29a4-4dbf-a1f3-f1e163e538b7")
 		)
@@ -5331,6 +5385,15 @@
 			)
 		)
 		(property "Description" "Analog temperature sensor, NTC, 0.3C accuracy, -13.6mV/C, -50C to +150C, 2.7 to 5.5V, SC-70-5"
+			(at 218.44 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "LMT87QDCKRQ1"
 			(at 218.44 62.23 0)
 			(effects
 				(font
@@ -6494,6 +6557,15 @@
 				(hide yes)
 			)
 		)
+		(property "P/N" "SHT45-AD1B-R3 "
+			(at 52.07 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "a7622d9d-ecf9-4cdf-81f0-1d60ff3a1b0d")
 		)
@@ -6628,6 +6700,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 85.09 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "C0805C104M5RACTU"
 			(at 85.09 63.5 0)
 			(effects
 				(font
@@ -7393,6 +7474,15 @@
 				(hide yes)
 			)
 		)
+		(property "P/N" "436500244"
+			(at 191.77 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "bcb3c004-86c9-4e3b-8f48-6b0ee13eca15")
 		)
@@ -7527,6 +7617,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 97.79 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "C0805C104M5RACTU"
 			(at 97.79 63.5 0)
 			(effects
 				(font
@@ -7866,6 +7965,15 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "P/N" "FS3000-1005"
+			(at 123.19 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 				(hide yes)
 			)
 		)
