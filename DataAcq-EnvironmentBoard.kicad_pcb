@@ -3836,7 +3836,7 @@
 			)
 		)
 		(property "Value" "3.3V"
-			(at 3.5 0 0)
+			(at 4 0 0)
 			(layer "B.SilkS")
 			(uuid "7304f793-315b-40aa-ae28-036d4527bd0f")
 			(effects
@@ -7408,6 +7408,18 @@
 		(at 158.5 92 90)
 		(layer "B.SilkS" knockout)
 		(uuid "0b706a16-20a3-4f01-a461-62dd79d49af7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.153)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "Data Acq Environment Board\nRavi Shah 2024"
+		(at 179 113 0)
+		(layer "B.SilkS")
+		(uuid "2ba2a8d8-ebb0-4a88-8dfb-b61685d2af21")
 		(effects
 			(font
 				(size 1 1)
