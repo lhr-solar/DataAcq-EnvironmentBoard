@@ -497,6 +497,10 @@
       {
         "netclass": "PWR/GND",
         "pattern": "+12V_In"
+      },
+      {
+        "netclass": "PWR/GND",
+        "pattern": "GNDPWR"
       }
     ]
   },
