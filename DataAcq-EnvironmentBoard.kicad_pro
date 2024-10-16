@@ -501,6 +501,10 @@
       {
         "netclass": "PWR/GND",
         "pattern": "GNDPWR"
+      },
+      {
+        "netclass": "PWR/GND",
+        "pattern": "+3.3V"
       }
     ]
   },
