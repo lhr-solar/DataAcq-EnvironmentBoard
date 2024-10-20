@@ -3088,6 +3088,16 @@
 	)
 	(wire
 		(pts
+			(xy 45.72 166.37) (xy 48.26 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "241d8b2b-ce5c-4994-88bd-d72d8cf49aa5")
+	)
+	(wire
+		(pts
 			(xy 160.02 60.96) (xy 160.02 63.5)
 		)
 		(stroke
@@ -4010,7 +4020,7 @@
 	)
 	(rectangle
 		(start 36.83 132.08)
-		(end 69.85 165.1)
+		(end 69.85 170.18)
 		(stroke
 			(width 0)
 			(type default)
@@ -4117,7 +4127,7 @@
 	)
 	(text_box "Testpoints"
 		(exclude_from_sim no)
-		(at 58.42 161.29 0)
+		(at 58.42 166.37 0)
 		(size 11.43 3.81)
 		(stroke
 			(width 0)
@@ -4413,6 +4423,17 @@
 			(justify left bottom)
 		)
 		(uuid "f518dead-c8b6-4032-b3ab-17891cf7b307")
+	)
+	(label "TEMP_OUT"
+		(at 48.26 166.37 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fcf61936-ee2b-4f16-82c3-cb0d805fde67")
 	)
 	(symbol
 		(lib_id "utsvt-connectors:PeripheralCANConnector")
@@ -6568,6 +6589,89 @@
 			(project "DataAcq-EnvironmentBoard"
 				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
 					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 45.72 166.37 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a4fee66e-66b1-4f65-b5bf-0f2db61fd555")
+		(property "Reference" "TP3"
+			(at 42.418 161.29 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 42.418 163.83 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "UTSVT_Special:TestPoint_HEX_3mmID"
+			(at 45.72 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 45.72 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 45.72 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PN" ""
+			(at 45.72 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "p/n" ""
+			(at 45.72 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7a083159-bf3c-4d63-9c55-218e3cee4350")
+		)
+		(instances
+			(project "DataAcq-EnvironmentBoard"
+				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
+					(reference "TP3")
 					(unit 1)
 				)
 			)
