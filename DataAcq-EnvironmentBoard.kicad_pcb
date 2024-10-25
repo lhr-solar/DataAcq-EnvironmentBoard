@@ -27942,7 +27942,7 @@
 			(justify left bottom mirror)
 		)
 	)
-	(gr_text "Data Acq Environment Board v1.0\nRavi Shah 2024"
+	(gr_text "Data Acq Environment Board\nRavi Shah 2024"
 		(at 174.635454 80.23726 0)
 		(layer "B.SilkS")
 		(uuid "2ba2a8d8-ebb0-4a88-8dfb-b61685d2af21")
@@ -27970,6 +27970,18 @@
 		(at 174.75 88 0)
 		(layer "B.SilkS" knockout)
 		(uuid "67892e22-fdc9-42ba-98b5-995c57dadc4b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.153)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "v1.0"
+		(at 152.25 78.738427 0)
+		(layer "B.SilkS" knockout)
+		(uuid "6df260f7-befb-446f-99c6-81a26fff87a9")
 		(effects
 			(font
 				(size 1 1)
