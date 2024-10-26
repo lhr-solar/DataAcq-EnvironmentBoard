@@ -3662,7 +3662,7 @@
 		(uuid "658c1d9b-804a-41f1-9d2e-d3a6c767e6f3")
 	)
 	(junction
-		(at 105.41 203.2)
+		(at 106.68 203.2)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6a63a78b-cef6-4a85-aba4-9f8557b180f3")
@@ -3674,13 +3674,13 @@
 		(uuid "73b02087-c5c8-4ef9-a293-319d295296f4")
 	)
 	(junction
-		(at 86.36 203.2)
+		(at 87.63 203.2)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "86e76468-ba80-4d38-b30a-dd8a8298af41")
 	)
 	(junction
-		(at 86.36 172.72)
+		(at 87.63 172.72)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "afe6179f-b23a-4537-b08d-3708916596dc")
@@ -3692,7 +3692,7 @@
 		(uuid "bcd76c20-c24b-4abf-9f0a-9813aa0c72fa")
 	)
 	(junction
-		(at 105.41 172.72)
+		(at 106.68 172.72)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c4209841-c23a-4f8a-9583-3f318efd5901")
@@ -3845,7 +3845,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 172.72) (xy 105.41 172.72)
+			(xy 87.63 172.72) (xy 106.68 172.72)
 		)
 		(stroke
 			(width 0)
@@ -3855,7 +3855,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 190.5) (xy 86.36 193.04)
+			(xy 87.63 190.5) (xy 87.63 193.04)
 		)
 		(stroke
 			(width 0)
@@ -3875,7 +3875,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 187.96) (xy 125.73 187.96)
+			(xy 124.46 187.96) (xy 127 187.96)
 		)
 		(stroke
 			(width 0)
@@ -3905,7 +3905,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 160.02) (xy 124.46 160.02)
+			(xy 87.63 160.02) (xy 125.73 160.02)
 		)
 		(stroke
 			(width 0)
@@ -3955,7 +3955,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 160.02) (xy 86.36 162.56)
+			(xy 87.63 160.02) (xy 87.63 162.56)
 		)
 		(stroke
 			(width 0)
@@ -3975,7 +3975,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 193.04) (xy 105.41 194.31)
+			(xy 106.68 193.04) (xy 106.68 194.31)
 		)
 		(stroke
 			(width 0)
@@ -4025,7 +4025,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 200.66) (xy 86.36 203.2)
+			(xy 87.63 200.66) (xy 87.63 203.2)
 		)
 		(stroke
 			(width 0)
@@ -4055,7 +4055,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 203.2) (xy 123.19 195.58)
+			(xy 124.46 203.2) (xy 124.46 195.58)
 		)
 		(stroke
 			(width 0)
@@ -4115,7 +4115,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 162.56) (xy 105.41 163.83)
+			(xy 106.68 162.56) (xy 106.68 163.83)
 		)
 		(stroke
 			(width 0)
@@ -4135,7 +4135,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 172.72) (xy 86.36 175.26)
+			(xy 87.63 172.72) (xy 87.63 175.26)
 		)
 		(stroke
 			(width 0)
@@ -4175,7 +4175,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 165.1) (xy 124.46 165.1)
+			(xy 124.46 165.1) (xy 125.73 165.1)
 		)
 		(stroke
 			(width 0)
@@ -4195,7 +4195,7 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 186.69) (xy 158.75 186.69)
+			(xy 162.56 186.69) (xy 160.02 186.69)
 		)
 		(stroke
 			(width 0)
@@ -4205,7 +4205,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 179.07) (xy 160.02 181.61)
+			(xy 161.29 179.07) (xy 161.29 181.61)
 		)
 		(stroke
 			(width 0)
@@ -4215,7 +4215,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 162.56) (xy 124.46 162.56)
+			(xy 106.68 162.56) (xy 125.73 162.56)
 		)
 		(stroke
 			(width 0)
@@ -4315,7 +4315,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 181.61) (xy 161.29 181.61)
+			(xy 161.29 181.61) (xy 162.56 181.61)
 		)
 		(stroke
 			(width 0)
@@ -4325,7 +4325,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 187.96) (xy 115.57 187.96)
+			(xy 111.76 187.96) (xy 116.84 187.96)
 		)
 		(stroke
 			(width 0)
@@ -4345,7 +4345,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 172.72) (xy 86.36 170.18)
+			(xy 87.63 172.72) (xy 87.63 170.18)
 		)
 		(stroke
 			(width 0)
@@ -4375,7 +4375,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 203.2) (xy 86.36 203.2)
+			(xy 106.68 203.2) (xy 87.63 203.2)
 		)
 		(stroke
 			(width 0)
@@ -4385,7 +4385,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 157.48) (xy 109.22 157.48)
+			(xy 115.57 157.48) (xy 110.49 157.48)
 		)
 		(stroke
 			(width 0)
@@ -4475,7 +4475,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 184.15) (xy 161.29 184.15)
+			(xy 151.13 184.15) (xy 162.56 184.15)
 		)
 		(stroke
 			(width 0)
@@ -4505,7 +4505,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 190.5) (xy 125.73 190.5)
+			(xy 87.63 190.5) (xy 127 190.5)
 		)
 		(stroke
 			(width 0)
@@ -4515,7 +4515,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 172.72) (xy 123.19 165.1)
+			(xy 124.46 172.72) (xy 124.46 165.1)
 		)
 		(stroke
 			(width 0)
@@ -4575,7 +4575,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 203.2) (xy 105.41 203.2)
+			(xy 124.46 203.2) (xy 106.68 203.2)
 		)
 		(stroke
 			(width 0)
@@ -4615,7 +4615,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 179.07) (xy 149.86 179.07)
+			(xy 146.05 179.07) (xy 151.13 179.07)
 		)
 		(stroke
 			(width 0)
@@ -4645,7 +4645,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 195.58) (xy 125.73 195.58)
+			(xy 124.46 195.58) (xy 127 195.58)
 		)
 		(stroke
 			(width 0)
@@ -4695,7 +4695,7 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 179.07) (xy 160.02 179.07)
+			(xy 158.75 179.07) (xy 161.29 179.07)
 		)
 		(stroke
 			(width 0)
@@ -4705,7 +4705,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 176.53) (xy 144.78 179.07)
+			(xy 146.05 176.53) (xy 146.05 179.07)
 		)
 		(stroke
 			(width 0)
@@ -4735,7 +4735,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 185.42) (xy 110.49 187.96)
+			(xy 111.76 185.42) (xy 111.76 187.96)
 		)
 		(stroke
 			(width 0)
@@ -4755,7 +4755,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 186.69) (xy 158.75 189.23)
+			(xy 160.02 186.69) (xy 160.02 189.23)
 		)
 		(stroke
 			(width 0)
@@ -4805,7 +4805,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 157.48) (xy 109.22 154.94)
+			(xy 110.49 157.48) (xy 110.49 154.94)
 		)
 		(stroke
 			(width 0)
@@ -4835,7 +4835,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 171.45) (xy 105.41 172.72)
+			(xy 106.68 171.45) (xy 106.68 172.72)
 		)
 		(stroke
 			(width 0)
@@ -4845,7 +4845,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 172.72) (xy 123.19 172.72)
+			(xy 106.68 172.72) (xy 124.46 172.72)
 		)
 		(stroke
 			(width 0)
@@ -4995,7 +4995,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 201.93) (xy 105.41 203.2)
+			(xy 106.68 201.93) (xy 106.68 203.2)
 		)
 		(stroke
 			(width 0)
@@ -5025,7 +5025,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 193.04) (xy 125.73 193.04)
+			(xy 106.68 193.04) (xy 127 193.04)
 		)
 		(stroke
 			(width 0)
@@ -5065,7 +5065,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 157.48) (xy 121.92 157.48)
+			(xy 125.73 157.48) (xy 123.19 157.48)
 		)
 		(stroke
 			(width 0)
@@ -5105,7 +5105,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 203.2) (xy 86.36 205.74)
+			(xy 87.63 203.2) (xy 87.63 205.74)
 		)
 		(stroke
 			(width 0)
@@ -5435,7 +5435,7 @@
 		(uuid "16e0c7a5-e968-4412-bccd-ee29a5fbaab7")
 	)
 	(label "I2C2_SCL"
-		(at 86.36 190.5 0)
+		(at 87.63 190.5 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5589,7 +5589,7 @@
 		(uuid "88fffd93-2c04-41a3-8967-77b08cd5636d")
 	)
 	(label "I2C1_SCL"
-		(at 86.36 160.02 0)
+		(at 87.63 160.02 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5622,7 +5622,7 @@
 		(uuid "b6a81ee7-9799-4d74-818a-64baf14fd124")
 	)
 	(label "PA1(ADC)"
-		(at 149.86 184.15 0)
+		(at 151.13 184.15 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5688,7 +5688,7 @@
 		(uuid "e640703b-e0ce-4d1e-be3f-928109422e96")
 	)
 	(label "I2C1_SDA"
-		(at 105.41 162.56 0)
+		(at 106.68 162.56 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5732,7 +5732,7 @@
 		(uuid "fcf61936-ee2b-4f16-82c3-cb0d805fde67")
 	)
 	(label "I2C2_SDA"
-		(at 105.41 193.04 0)
+		(at 106.68 193.04 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5828,7 +5828,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDA")
-		(at 158.75 189.23 0)
+		(at 160.02 189.23 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5837,7 +5837,7 @@
 		(fields_autoplaced yes)
 		(uuid "02cca922-5e54-41d0-a49f-dd3d04732587")
 		(property "Reference" "#PWR031"
-			(at 158.75 195.58 0)
+			(at 160.02 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5846,7 +5846,7 @@
 			)
 		)
 		(property "Value" "GNDA"
-			(at 158.75 194.31 0)
+			(at 160.02 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5854,7 +5854,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 158.75 189.23 0)
+			(at 160.02 189.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5863,7 +5863,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 158.75 189.23 0)
+			(at 160.02 189.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5872,7 +5872,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
-			(at 158.75 189.23 0)
+			(at 160.02 189.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6043,7 +6043,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x03_Socket")
-		(at 166.37 184.15 0)
+		(at 167.64 184.15 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6051,7 +6051,7 @@
 		(dnp no)
 		(uuid "152ddbd2-2fae-4344-aa88-0ca656177d22")
 		(property "Reference" "J5"
-			(at 166.624 179.578 0)
+			(at 167.894 179.578 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6060,7 +6060,7 @@
 			)
 		)
 		(property "Value" "Temp Breakout"
-			(at 161.036 188.976 0)
+			(at 162.306 188.976 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6068,8 +6068,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 166.37 184.15 0)
+		(property "Footprint" "UTSVT_Connectors:Molex_MicroFit3.0_1x3xP3.00mm_PolarizingPeg_Vertical"
+			(at 167.64 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6078,7 +6078,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 166.37 184.15 0)
+			(at 167.64 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6087,7 +6087,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x03, script generated"
-			(at 166.37 184.15 0)
+			(at 167.64 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6181,7 +6181,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x04_Socket")
-		(at 130.81 190.5 0)
+		(at 132.08 190.5 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6189,7 +6189,7 @@
 		(dnp no)
 		(uuid "1a7c5bca-59b1-49d0-be6e-23533dd497a0")
 		(property "Reference" "J1"
-			(at 130.81 185.674 0)
+			(at 132.08 185.674 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6198,7 +6198,7 @@
 			)
 		)
 		(property "Value" "Airflow Breakout"
-			(at 125.73 197.866 0)
+			(at 127 197.866 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6206,8 +6206,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 130.81 190.5 0)
+		(property "Footprint" "UTSVT_Connectors:Molex_MicroFit3.0_1x4xP3.00mm_PolarizingPeg_Vertical"
+			(at 132.08 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6216,7 +6216,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 130.81 190.5 0)
+			(at 132.08 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6225,7 +6225,16 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated"
-			(at 130.81 190.5 0)
+			(at 132.08 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" " "
+			(at 132.08 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6680,7 +6689,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 86.36 196.85 270)
+		(at 87.63 196.85 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6688,7 +6697,7 @@
 		(dnp no)
 		(uuid "362b7e9a-42f5-42ac-a199-e1edd7a888e2")
 		(property "Reference" "D5"
-			(at 88.9 195.5799 90)
+			(at 90.17 195.5799 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6696,8 +6705,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "ESD9B3.3ST5G"
-			(at 88.9 198.1199 90)
+		(property "Value" "ESD9B"
+			(at 90.17 198.1199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6706,7 +6715,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-923"
-			(at 86.36 196.85 0)
+			(at 87.63 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6715,7 +6724,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/ESD9B-D.PDF"
-			(at 86.36 196.85 0)
+			(at 87.63 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6724,7 +6733,16 @@
 			)
 		)
 		(property "Description" "ESD protection diode, 3.3Vrwm, SOD-923"
-			(at 86.36 196.85 0)
+			(at 87.63 196.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "ESD9B3.3ST5G"
+			(at 87.63 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7196,7 +7214,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x04_Socket")
-		(at 129.54 160.02 0)
+		(at 130.81 160.02 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7204,7 +7222,7 @@
 		(dnp no)
 		(uuid "5c70f192-e565-43ac-ace2-fda64afec01e")
 		(property "Reference" "J4"
-			(at 129.286 155.194 0)
+			(at 130.556 155.194 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7213,7 +7231,7 @@
 			)
 		)
 		(property "Value" "Humidity Breakout"
-			(at 124.206 167.386 0)
+			(at 125.476 167.386 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7221,8 +7239,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 129.54 160.02 0)
+		(property "Footprint" "UTSVT_Connectors:Molex_MicroFit3.0_1x4xP3.00mm_PolarizingPeg_Vertical"
+			(at 130.81 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7231,7 +7249,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 129.54 160.02 0)
+			(at 130.81 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7240,7 +7258,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated"
-			(at 129.54 160.02 0)
+			(at 130.81 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7620,7 +7638,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 86.36 205.74 0)
+		(at 87.63 205.74 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7629,7 +7647,7 @@
 		(fields_autoplaced yes)
 		(uuid "682813e8-df2e-4840-97b4-87995e8c4a40")
 		(property "Reference" "#PWR013"
-			(at 86.36 212.09 0)
+			(at 87.63 212.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7638,7 +7656,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 86.36 210.82 0)
+			(at 87.63 210.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7646,7 +7664,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 86.36 205.74 0)
+			(at 87.63 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7655,7 +7673,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 205.74 0)
+			(at 87.63 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7664,7 +7682,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 86.36 205.74 0)
+			(at 87.63 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7902,7 +7920,7 @@
 	)
 	(symbol
 		(lib_id "Device:Polyfuse")
-		(at 118.11 157.48 90)
+		(at 119.38 157.48 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7911,23 +7929,23 @@
 		(fields_autoplaced yes)
 		(uuid "6d45c536-4e5d-4728-b3fd-a29f8a7ee381")
 		(property "Reference" "F1"
-			(at 118.11 151.13 90)
+			(at 119.38 151.13 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "0ZCM0010FF2G"
-			(at 118.11 153.67 90)
+		(property "Value" "250mA"
+			(at 119.38 153.67 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 123.19 156.21 0)
+		(property "Footprint" "Fuse:Fuse_0603_1608Metric"
+			(at 124.46 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7937,7 +7955,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.com/ProductDetail/530-0ZCM0010FF2G"
-			(at 118.11 157.48 0)
+			(at 119.38 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7946,7 +7964,16 @@
 			)
 		)
 		(property "Description" "Resettable fuse, polymeric positive temperature coefficient"
-			(at 118.11 157.48 0)
+			(at 119.38 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "0ZCM0010FF2G"
+			(at 119.38 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7971,7 +7998,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 105.41 198.12 270)
+		(at 106.68 198.12 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7979,7 +8006,7 @@
 		(dnp no)
 		(uuid "6d77f958-b485-44c4-a50d-7dd340f9beb9")
 		(property "Reference" "D6"
-			(at 107.95 196.8499 90)
+			(at 109.22 196.8499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7987,8 +8014,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "ESD9B3.3ST5G"
-			(at 107.95 199.3899 90)
+		(property "Value" "ESD9B"
+			(at 109.22 199.3899 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7997,7 +8024,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-923"
-			(at 105.41 198.12 0)
+			(at 106.68 198.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8006,7 +8033,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/ESD9B-D.PDF"
-			(at 105.41 198.12 0)
+			(at 106.68 198.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8015,7 +8042,16 @@
 			)
 		)
 		(property "Description" "ESD protection diode, 3.3Vrwm, SOD-923"
-			(at 105.41 198.12 0)
+			(at 106.68 198.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "ESD9B3.3ST5G"
+			(at 106.68 198.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8189,7 +8225,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 86.36 175.26 0)
+		(at 87.63 175.26 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8198,7 +8234,7 @@
 		(fields_autoplaced yes)
 		(uuid "71aeb0dd-8838-4443-b2f9-acf5d537b8a8")
 		(property "Reference" "#PWR029"
-			(at 86.36 181.61 0)
+			(at 87.63 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8207,7 +8243,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 86.36 180.34 0)
+			(at 87.63 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8215,7 +8251,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 86.36 175.26 0)
+			(at 87.63 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8224,7 +8260,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 175.26 0)
+			(at 87.63 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8233,7 +8269,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 86.36 175.26 0)
+			(at 87.63 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8538,7 +8574,7 @@
 	)
 	(symbol
 		(lib_id "power:VDDA")
-		(at 144.78 176.53 0)
+		(at 146.05 176.53 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8546,7 +8582,7 @@
 		(dnp no)
 		(uuid "90439401-c3ef-4a76-b087-6c7e6b314ef3")
 		(property "Reference" "#PWR030"
-			(at 144.78 180.34 0)
+			(at 146.05 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8555,7 +8591,7 @@
 			)
 		)
 		(property "Value" "VDDA"
-			(at 144.7801 172.72 90)
+			(at 146.0501 172.72 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8564,7 +8600,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 144.78 176.53 0)
+			(at 146.05 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8573,7 +8609,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 144.78 176.53 0)
+			(at 146.05 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8582,7 +8618,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VDDA\""
-			(at 144.78 176.53 0)
+			(at 146.05 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8756,7 +8792,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 109.22 154.94 0)
+		(at 110.49 154.94 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8765,7 +8801,7 @@
 		(fields_autoplaced yes)
 		(uuid "9bd90fb1-8680-4333-81c9-73c83648f381")
 		(property "Reference" "#PWR028"
-			(at 109.22 158.75 0)
+			(at 110.49 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8774,7 +8810,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 109.22 149.86 0)
+			(at 110.49 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8782,7 +8818,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 109.22 154.94 0)
+			(at 110.49 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8791,7 +8827,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 109.22 154.94 0)
+			(at 110.49 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8800,7 +8836,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 109.22 154.94 0)
+			(at 110.49 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8889,7 +8925,7 @@
 	)
 	(symbol
 		(lib_id "Device:Polyfuse")
-		(at 119.38 187.96 90)
+		(at 120.65 187.96 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8898,23 +8934,23 @@
 		(fields_autoplaced yes)
 		(uuid "9feb369f-b9a4-45c4-96dc-d8737e6bf5fe")
 		(property "Reference" "F2"
-			(at 119.38 181.61 90)
+			(at 120.65 181.61 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "0ZCM0010FF2G"
-			(at 119.38 184.15 90)
+		(property "Value" "250mA"
+			(at 120.65 184.15 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 124.46 186.69 0)
+		(property "Footprint" "Fuse:Fuse_0603_1608Metric"
+			(at 125.73 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8924,7 +8960,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.com/ProductDetail/530-0ZCM0010FF2G"
-			(at 119.38 187.96 0)
+			(at 120.65 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8933,7 +8969,16 @@
 			)
 		)
 		(property "Description" "Resettable fuse, polymeric positive temperature coefficient"
-			(at 119.38 187.96 0)
+			(at 120.65 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "0ZCM0010FF2G"
+			(at 120.65 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9191,7 +9236,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 110.49 185.42 0)
+		(at 111.76 185.42 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9200,7 +9245,7 @@
 		(fields_autoplaced yes)
 		(uuid "aec6e111-4252-446a-a1fd-28615607fb99")
 		(property "Reference" "#PWR09"
-			(at 110.49 189.23 0)
+			(at 111.76 189.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9209,7 +9254,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 110.49 180.34 0)
+			(at 111.76 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9217,7 +9262,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 110.49 185.42 0)
+			(at 111.76 185.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9226,7 +9271,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 110.49 185.42 0)
+			(at 111.76 185.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9235,7 +9280,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 110.49 185.42 0)
+			(at 111.76 185.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9485,7 +9530,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 86.36 166.37 270)
+		(at 87.63 166.37 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9493,7 +9538,7 @@
 		(dnp no)
 		(uuid "c055d00b-fb0d-4fd4-9dda-727d1487f020")
 		(property "Reference" "D3"
-			(at 88.9 165.0999 90)
+			(at 90.17 165.0999 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9501,8 +9546,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "ESD9B3.3ST5G"
-			(at 88.9 167.6399 90)
+		(property "Value" "ESD9B"
+			(at 90.17 167.6399 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9511,7 +9556,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-923"
-			(at 86.36 166.37 0)
+			(at 87.63 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9520,7 +9565,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/ESD9B-D.PDF"
-			(at 86.36 166.37 0)
+			(at 87.63 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9529,7 +9574,16 @@
 			)
 		)
 		(property "Description" "ESD protection diode, 3.3Vrwm, SOD-923"
-			(at 86.36 166.37 0)
+			(at 87.63 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "ESD9B3.3ST5G"
+			(at 87.63 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10377,7 +10431,7 @@
 	)
 	(symbol
 		(lib_id "Device:Polyfuse")
-		(at 153.67 179.07 90)
+		(at 154.94 179.07 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10386,23 +10440,23 @@
 		(fields_autoplaced yes)
 		(uuid "e46faac9-f8a8-4ed4-83f5-1b230be869e7")
 		(property "Reference" "F3"
-			(at 153.67 172.72 90)
+			(at 154.94 172.72 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "0ZCM0010FF2G"
-			(at 153.67 175.26 90)
+		(property "Value" "250mA"
+			(at 154.94 175.26 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 158.75 177.8 0)
+		(property "Footprint" "Fuse:Fuse_0603_1608Metric"
+			(at 160.02 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10412,7 +10466,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.com/ProductDetail/530-0ZCM0010FF2G"
-			(at 153.67 179.07 0)
+			(at 154.94 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10421,7 +10475,16 @@
 			)
 		)
 		(property "Description" "Resettable fuse, polymeric positive temperature coefficient"
-			(at 153.67 179.07 0)
+			(at 154.94 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "0ZCM0010FF2G"
+			(at 154.94 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11053,7 +11116,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 105.41 167.64 270)
+		(at 106.68 167.64 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11061,7 +11124,7 @@
 		(dnp no)
 		(uuid "f828c251-9b8e-4a2f-82e7-fc90efc056c8")
 		(property "Reference" "D4"
-			(at 107.95 166.3699 90)
+			(at 109.22 166.3699 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11069,8 +11132,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "ESD9B3.3ST5G"
-			(at 107.95 168.9099 90)
+		(property "Value" "ESD9B"
+			(at 109.22 168.9099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11079,7 +11142,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-923"
-			(at 105.41 167.64 0)
+			(at 106.68 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11088,7 +11151,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/ESD9B-D.PDF"
-			(at 105.41 167.64 0)
+			(at 106.68 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11097,7 +11160,16 @@
 			)
 		)
 		(property "Description" "ESD protection diode, 3.3Vrwm, SOD-923"
-			(at 105.41 167.64 0)
+			(at 106.68 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "ESD9B3.3ST5G"
+			(at 106.68 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
