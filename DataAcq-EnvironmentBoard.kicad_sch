@@ -4629,7 +4629,7 @@
 				)
 			)
 		)
-		(property "Footprint" "UTSVT_Special:TestPoint_HEX_3mmID"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 35.56 172.72 0)
 			(effects
 				(font
@@ -4844,7 +4844,7 @@
 				)
 			)
 		)
-		(property "Footprint" "UTSVT_Special:TestPoint_HEX_3mmID"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 55.88 163.83 0)
 			(effects
 				(font
@@ -7081,7 +7081,7 @@
 				)
 			)
 		)
-		(property "Footprint" "UTSVT_Special:TestPoint_HEX_3mmID"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 35.56 181.61 0)
 			(effects
 				(font
@@ -8215,7 +8215,7 @@
 				)
 			)
 		)
-		(property "Footprint" "UTSVT_Special:TestPoint_HEX_3mmID"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 55.88 172.72 0)
 			(effects
 				(font
@@ -8297,7 +8297,7 @@
 				)
 			)
 		)
-		(property "Footprint" "FS30001005"
+		(property "Footprint" "SamacSys_Parts:FS30001005"
 			(at 148.59 136.83 0)
 			(effects
 				(font
