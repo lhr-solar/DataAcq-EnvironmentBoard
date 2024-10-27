@@ -409,7 +409,7 @@
 		)
 		(fp_arc
 			(start 18.037742 -21.812258)
-			(mid 20.300482 -20.874999)
+			(mid 20.300485 -20.874999)
 			(end 21.237742 -18.612258)
 			(stroke
 				(width 0.1)
@@ -1737,7 +1737,7 @@
 			)
 		)
 		(property "Value" "3.3V"
-			(at 3.65 -0.344515 270)
+			(at 3.65 -0.344515 -90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "68e075f0-9bb8-466e-9cda-28cf2d6713f5")
@@ -3440,7 +3440,7 @@
 		(descr "https://www.onsemi.com/pub/Collateral/ESD9B-D.PDF#page=4")
 		(tags "Diode SOD923")
 		(property "Reference" "D5"
-			(at 1.92 0.1 360)
+			(at 1.92 0.1 0)
 			(layer "F.SilkS")
 			(uuid "8bf4a224-73b0-414f-9351-3f188bc72e1a")
 			(effects
@@ -3451,7 +3451,7 @@
 			)
 		)
 		(property "Value" "ESD9B"
-			(at 0 1.2 360)
+			(at 0 1.2 0)
 			(layer "F.Fab")
 			(uuid "09fc8d47-c300-4507-8c50-7144fe8f4f2b")
 			(effects
@@ -3769,7 +3769,7 @@
 			(uuid "20b1e872-e0e0-41b4-9f89-24464b95e037")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 -1.2 360)
+			(at 0 -1.2 0)
 			(layer "F.Fab")
 			(uuid "a4fdc77b-dfde-45d2-a76a-f9e21cbe2c59")
 			(effects
@@ -5467,7 +5467,8 @@
 			)
 		)
 		(property "Value" "12V"
-			(at -3.4375 0 90)
+			(at -3.4375 0 -90)
+			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "b5c6e4d5-fd16-4d77-9d26-cf416da6f736")
 			(effects
@@ -28294,7 +28295,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C5"
-			(at 0 -1.75 360)
+			(at 0 -1.75 0)
 			(layer "B.SilkS")
 			(uuid "ef231a28-c8cd-4ed2-b9b5-3c383c90ee3b")
 			(effects
@@ -28306,7 +28307,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 0 -1.68 360)
+			(at 0 -1.68 0)
 			(layer "B.Fab")
 			(uuid "ab786982-9fbb-45ec-ba86-9935997dfabc")
 			(effects
@@ -28479,7 +28480,7 @@
 			(uuid "a1c22205-db43-43fc-a4f7-c7634b020b4e")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(uuid "4e8740bd-343b-4b9e-981c-8769eb6a06b1")
 			(effects
@@ -31253,9 +31254,9 @@
 		(pts
 			(xy 179.537742 71.187742) (xy 179.53774 74.38775)
 		)
-		(height -37.179534)
+		(height -20.575777)
 		(gr_text "3.2000 mm"
-			(at 218.2 72.6 90)
+			(at 201.75 72.6 90)
 			(layer "Dwgs.User")
 			(uuid "8464f614-cf51-4c06-80a4-9d8b66e61802")
 			(effects
@@ -31354,9 +31355,9 @@
 		(pts
 			(xy 179.5 118) (xy 179.5 130.25)
 		)
-		(height -39.5)
+		(height -21)
 		(gr_text "12.2500 mm"
-			(at 220.5 123.9 90)
+			(at 201.75 123.9 90)
 			(layer "Dwgs.User")
 			(uuid "c52b5ce3-3cac-495c-ba13-1814b7f639fc")
 			(effects
