@@ -3865,16 +3865,6 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 156.21) (xy 63.5 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "17d14dd6-1a3e-40ef-b428-029774286e50")
-	)
-	(wire
-		(pts
 			(xy 124.46 187.96) (xy 127 187.96)
 		)
 		(stroke
@@ -4042,16 +4032,6 @@
 			(type default)
 		)
 		(uuid "34670493-9faf-4cc2-9173-1fd20d6b6e10")
-	)
-	(wire
-		(pts
-			(xy 40.64 165.1) (xy 43.18 165.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "35350973-6663-4dfa-a5ca-3f4e17cc1a32")
 	)
 	(wire
 		(pts
@@ -4545,16 +4525,6 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 173.99) (xy 43.18 173.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a3d4ec73-b883-47ed-859f-8f746b418f81")
-	)
-	(wire
-		(pts
 			(xy 85.09 38.1) (xy 123.19 38.1)
 		)
 		(stroke
@@ -5005,16 +4975,6 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 165.1) (xy 63.5 165.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f02ae04e-64a4-4b12-a0bc-68865e915211")
-	)
-	(wire
-		(pts
 			(xy 99.06 85.09) (xy 107.95 85.09)
 		)
 		(stroke
@@ -5197,7 +5157,7 @@
 	)
 	(rectangle
 		(start 29.21 119.38)
-		(end 74.93 179.07)
+		(end 74.93 160.02)
 		(stroke
 			(width 0)
 			(type default)
@@ -5335,7 +5295,7 @@
 	)
 	(text_box "Testpoints"
 		(exclude_from_sim no)
-		(at 63.5 175.26 0)
+		(at 63.5 156.21 0)
 		(size 11.43 3.81)
 		(stroke
 			(width 0)
@@ -5511,6 +5471,17 @@
 		)
 		(uuid "3dc0db8d-f93b-4d06-96d8-2871aac8c85e")
 	)
+	(label "I2C1_SDA"
+		(at 87.63 160.02 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "441c5c89-553a-4ab3-9a8a-cfe675497e64")
+	)
 	(label "AFLW_TP1"
 		(at 152.4 38.1 0)
 		(fields_autoplaced yes)
@@ -5521,17 +5492,6 @@
 			(justify left bottom)
 		)
 		(uuid "49787578-b3ae-4887-80ce-2c7a1bfebfa8")
-	)
-	(label "I2C2_SCL"
-		(at 63.5 156.21 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "677f5180-da36-44b6-b64d-605fb4e7caa6")
 	)
 	(label "I2C2_SDA"
 		(at 157.48 107.95 180)
@@ -5577,28 +5537,6 @@
 		)
 		(uuid "8311cc54-9d69-4d8f-9d09-d82e0098f50e")
 	)
-	(label "I2C1_SCL"
-		(at 43.18 165.1 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "88fffd93-2c04-41a3-8967-77b08cd5636d")
-	)
-	(label "I2C1_SCL"
-		(at 87.63 160.02 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "8ffe9a6f-bdbf-418d-bf32-0195e10c8951")
-	)
 	(label "CAN_L"
 		(at 180.34 90.17 0)
 		(fields_autoplaced yes)
@@ -5609,17 +5547,6 @@
 			(justify left bottom)
 		)
 		(uuid "abb6827b-0f7d-4c54-9bd9-1ae7a25991c7")
-	)
-	(label "I2C1_SDA"
-		(at 43.18 173.99 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "b6a81ee7-9799-4d74-818a-64baf14fd124")
 	)
 	(label "PA1(ADC)"
 		(at 151.13 184.15 0)
@@ -5643,8 +5570,8 @@
 		)
 		(uuid "c08fd35c-e116-4f60-88fe-96d726162774")
 	)
-	(label "I2C2_SDA"
-		(at 63.5 165.1 0)
+	(label "I2C1_SCL"
+		(at 106.68 162.56 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5652,7 +5579,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c2d0a4ed-4042-4b7f-b1a5-1a3fc98f0902")
+		(uuid "c450e513-00fb-4e06-95aa-afc7e9f3fbc3")
 	)
 	(label "I2C1_SCL"
 		(at 157.48 99.06 180)
@@ -5686,17 +5613,6 @@
 			(justify left bottom)
 		)
 		(uuid "e640703b-e0ce-4d1e-be3f-928109422e96")
-	)
-	(label "I2C1_SDA"
-		(at 106.68 162.56 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "efd6bf43-1c4e-45a5-b243-6a34064e7a4c")
 	)
 	(label "CAN_L"
 		(at 180.34 109.22 0)
@@ -5893,42 +5809,34 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 40.64 165.1 90)
+		(lib_id "Diode:ESD9B3.3ST5G")
+		(at 87.63 166.37 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0f873ad2-e971-4b25-900d-5bc58240c35e")
-		(property "Reference" "TP6"
-			(at 37.338 160.02 90)
+		(uuid "056496b5-7f7e-4a13-8a32-bd99e9eaef30")
+		(property "Reference" "D4"
+			(at 90.17 165.0999 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
-			(at 37.338 162.56 90)
+		(property "Value" "ESD9B"
+			(at 90.17 167.6399 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 40.64 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 40.64 160.02 0)
+		(property "Footprint" "Diode_SMD:D_SOD-923"
+			(at 87.63 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5936,8 +5844,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "test point"
-			(at 40.64 165.1 0)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/ESD9B-D.PDF"
+			(at 87.63 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5945,8 +5853,8 @@
 				(hide yes)
 			)
 		)
-		(property "PN" ""
-			(at 40.64 165.1 0)
+		(property "Description" "ESD protection diode, 3.3Vrwm, SOD-923"
+			(at 87.63 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5954,8 +5862,8 @@
 				(hide yes)
 			)
 		)
-		(property "p/n" ""
-			(at 40.64 165.1 0)
+		(property "P/N" "ESD9B3.3ST5G"
+			(at 87.63 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5964,12 +5872,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "ecbc186c-d26c-4216-8785-7c3d5c7fc1a1")
+			(uuid "d3639a2d-6519-401b-a3ce-79c643256f2c")
+		)
+		(pin "2"
+			(uuid "307336f3-48b2-4438-b5f1-7ec655ff5f7e")
 		)
 		(instances
 			(project "DataAcq-EnvironmentBoard"
 				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
-					(reference "TP6")
+					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -6258,89 +6169,6 @@
 			(project ""
 				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
 					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 60.96 156.21 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1d4caec6-fb74-4c40-bb8b-0ac51405f6aa")
-		(property "Reference" "TP8"
-			(at 57.658 151.13 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 57.658 153.67 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 60.96 151.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 60.96 151.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 60.96 156.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "PN" ""
-			(at 60.96 156.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "p/n" ""
-			(at 60.96 156.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "69412382-a1fe-46d4-bcc3-18e67b3e31fe")
-		)
-		(instances
-			(project "DataAcq-EnvironmentBoard"
-				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
-					(reference "TP8")
 					(unit 1)
 				)
 			)
@@ -7919,6 +7747,84 @@
 		)
 	)
 	(symbol
+		(lib_id "Diode:ESD9B3.3ST5G")
+		(at 106.68 167.64 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6bed244c-5bf0-44cc-88d3-214ecab8bfb8")
+		(property "Reference" "D3"
+			(at 109.22 166.3699 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ESD9B"
+			(at 109.22 168.9099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-923"
+			(at 106.68 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/ESD9B-D.PDF"
+			(at 106.68 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "ESD protection diode, 3.3Vrwm, SOD-923"
+			(at 106.68 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "ESD9B3.3ST5G"
+			(at 106.68 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "abf0caa9-1a96-45d2-aafd-fd5dad8e42da")
+		)
+		(pin "2"
+			(uuid "fa605c05-747f-45be-a427-e4fa63c31c21")
+		)
+		(instances
+			(project "DataAcq-EnvironmentBoard"
+				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:Polyfuse")
 		(at 119.38 157.48 90)
 		(unit 1)
@@ -9152,89 +9058,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 40.64 173.99 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a841e7ce-831e-413b-9bf8-414274a67316")
-		(property "Reference" "TP7"
-			(at 37.338 168.91 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 37.338 171.45 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 40.64 168.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 40.64 168.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 40.64 173.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "PN" ""
-			(at 40.64 173.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "p/n" ""
-			(at 40.64 173.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "fcf4ec80-4948-4778-9d04-ead7c8c5f75c")
-		)
-		(instances
-			(project "DataAcq-EnvironmentBoard"
-				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
-					(reference "TP7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3.3V")
 		(at 111.76 185.42 0)
 		(unit 1)
@@ -9523,84 +9346,6 @@
 			(project "DataAcq-EnvironmentBoard"
 				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
 					(reference "TP5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 87.63 166.37 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "c055d00b-fb0d-4fd4-9dda-727d1487f020")
-		(property "Reference" "D3"
-			(at 90.17 165.0999 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "ESD9B"
-			(at 90.17 167.6399 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SOD-923"
-			(at 87.63 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/ESD9B-D.PDF"
-			(at 87.63 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "ESD protection diode, 3.3Vrwm, SOD-923"
-			(at 87.63 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "P/N" "ESD9B3.3ST5G"
-			(at 87.63 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "dd5237e7-ec94-41ac-a328-a8ed1a70f05c")
-		)
-		(pin "2"
-			(uuid "e76d5743-6c3e-4d8d-904a-824942c264eb")
-		)
-		(instances
-			(project ""
-				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
-					(reference "D3")
 					(unit 1)
 				)
 			)
@@ -10508,89 +10253,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 60.96 165.1 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e95b9b13-42cb-477f-8674-9e39da9bf485")
-		(property "Reference" "TP9"
-			(at 57.658 160.02 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 57.658 162.56 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 60.96 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 60.96 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 60.96 165.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "PN" ""
-			(at 60.96 165.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "p/n" ""
-			(at 60.96 165.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "dec130fa-c22a-4a7c-927a-2f52abcb895e")
-		)
-		(instances
-			(project "DataAcq-EnvironmentBoard"
-				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
-					(reference "TP9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "SamacSys_Parts:FS3000-1005")
 		(at 123.19 35.56 0)
 		(unit 1)
@@ -11109,84 +10771,6 @@
 			(project "DataAcq-EnvironmentBoard"
 				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
 					(reference "#PWR027")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 106.68 167.64 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f828c251-9b8e-4a2f-82e7-fc90efc056c8")
-		(property "Reference" "D4"
-			(at 109.22 166.3699 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "ESD9B"
-			(at 109.22 168.9099 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SOD-923"
-			(at 106.68 167.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/ESD9B-D.PDF"
-			(at 106.68 167.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "ESD protection diode, 3.3Vrwm, SOD-923"
-			(at 106.68 167.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "P/N" "ESD9B3.3ST5G"
-			(at 106.68 167.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "574ccddb-ecd0-4d15-95bc-e6f94f7cdd42")
-		)
-		(pin "2"
-			(uuid "76370ac0-acae-4c20-9f99-2cb86574630d")
-		)
-		(instances
-			(project "DataAcq-EnvironmentBoard"
-				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
-					(reference "D4")
 					(unit 1)
 				)
 			)
