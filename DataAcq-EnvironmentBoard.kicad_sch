@@ -6006,6 +6006,15 @@
 				(hide yes)
 			)
 		)
+		(property "P/N" "436500315"
+			(at 167.64 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "02b3395d-1e8b-4b8d-8208-17b195e0a791")
 		)
@@ -6144,7 +6153,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" " "
+		(property "P/N" "436500244"
 			(at 132.08 190.5 0)
 			(effects
 				(font
@@ -7086,6 +7095,15 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 130.81 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "436500244"
 			(at 130.81 160.02 0)
 			(effects
 				(font
