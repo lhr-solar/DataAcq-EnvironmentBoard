@@ -409,7 +409,7 @@
 		)
 		(fp_arc
 			(start 18.037742 -21.812258)
-			(mid 20.300485 -20.874999)
+			(mid 20.300482 -20.874999)
 			(end 21.237742 -18.612258)
 			(stroke
 				(width 0.1)
@@ -31122,18 +31122,6 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "2_SDA"
-		(at 140.8 85.4 270)
-		(layer "F.SilkS" knockout)
-		(uuid "702a0f4d-5af4-4078-bdd7-7679affffce5")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.153)
-			)
-			(justify left bottom)
-		)
-	)
 	(gr_text "Humidity Breakout"
 		(at 194.25 117.5 90)
 		(layer "F.SilkS")
@@ -31149,18 +31137,6 @@
 		(at 184.5 120 90)
 		(layer "F.SilkS" knockout)
 		(uuid "a644c9a9-9335-4536-8ea5-1476ef1b23d7")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.153)
-			)
-			(justify left bottom)
-		)
-	)
-	(gr_text "2_SCL"
-		(at 140.8 98.2 270)
-		(layer "F.SilkS" knockout)
-		(uuid "bd78159a-38a1-469e-a916-22425f32b517")
 		(effects
 			(font
 				(size 1 1)
