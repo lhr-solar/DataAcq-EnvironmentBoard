@@ -1,0 +1,15 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP NE555DR
+D Single Precision Timer
+K
+F http://www.ti.com/lit/ds/symlink/ne555.pdf
+$ENDCMP
+#
+$CMP FS3000-1005
+D The FS3000 is a surface-mount type air velocity module utilizing a MEMS thermopile-based sensor. The FS3000 features a digital output with 12-bit resolution. The sensor comprises a solid thermal isolation technology and silicon-carbide coating to protect it from abrasive wear and water condensation.The FS3000 features a compact design fit for low profile enclosures.
+K
+F https://www.renesas.com/us/en/document/dst/fs3000-datasheet?language=en&r=1395551
+$ENDCMP
+#
+#End Doc Library
