@@ -3665,10 +3665,10 @@
 		)
 		(uuid b25d041e-8e24-4901-ba09-ffa3f01c06b3)
 	)
-	(text_box "Breakout Board Connectors"
+	(text_box "Breakout Board Connectors & Protection"
 		(exclude_from_sim no)
-		(at 194.31 194.31 0)
-		(size 29.21 3.81)
+		(at 181.61 194.31 0)
+		(size 41.91 3.81)
 		(stroke
 			(width 0)
 			(type default)
@@ -4780,7 +4780,7 @@
 	)
 	(symbol
 		(lib_id "utsvt-misc:Logo_Placeholder")
-		(at 265.43 118.11 0)
+		(at 265.43 109.22 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4789,7 +4789,7 @@
 		(fields_autoplaced yes)
 		(uuid "26c0da1e-9498-4576-a773-99a0b505491e")
 		(property "Reference" "LOGO3"
-			(at 265.43 114.3 0)
+			(at 265.43 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4798,7 +4798,7 @@
 			)
 		)
 		(property "Value" "UTSVT Logo"
-			(at 269.24 118.1099 0)
+			(at 269.24 109.2199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4807,7 +4807,7 @@
 			)
 		)
 		(property "Footprint" "UTSVT_Special:UTSVT_Logo_Symbol"
-			(at 265.43 116.205 0)
+			(at 265.43 107.315 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4816,7 +4816,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 265.43 116.205 0)
+			(at 265.43 107.315 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4825,7 +4825,7 @@
 			)
 		)
 		(property "Description" "Graph footprint placeholder"
-			(at 265.43 118.11 0)
+			(at 265.43 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7067,7 +7067,7 @@
 	)
 	(symbol
 		(lib_id "utsvt-misc:Logo_Placeholder")
-		(at 265.43 109.22 0)
+		(at 265.43 100.33 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7076,7 +7076,7 @@
 		(fields_autoplaced yes)
 		(uuid "c7a61246-81cc-4f21-94d6-160b4647e56a")
 		(property "Reference" "LOGO2"
-			(at 265.43 105.41 0)
+			(at 265.43 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7085,7 +7085,7 @@
 			)
 		)
 		(property "Value" "Dr. Hallock"
-			(at 269.24 109.2199 0)
+			(at 269.24 100.3299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7094,7 +7094,7 @@
 			)
 		)
 		(property "Footprint" "UTSVT_Special:Hallock_Image_Tiny"
-			(at 265.43 107.315 0)
+			(at 265.43 98.425 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7103,7 +7103,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 265.43 107.315 0)
+			(at 265.43 98.425 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7112,7 +7112,7 @@
 			)
 		)
 		(property "Description" "Graph footprint placeholder"
-			(at 265.43 109.22 0)
+			(at 265.43 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7471,70 +7471,6 @@
 			(project "DataAcq-EnvironmentBoard"
 				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
 					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "utsvt-misc:Logo_Placeholder")
-		(at 265.43 100.33 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e3743944-8676-4a8a-a638-37980cfa531c")
-		(property "Reference" "LOGO1"
-			(at 265.43 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "Arrow"
-			(at 269.24 100.3299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "images:arrow"
-			(at 265.43 98.425 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 265.43 98.425 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Graph footprint placeholder"
-			(at 265.43 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project ""
-				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
-					(reference "LOGO1")
 					(unit 1)
 				)
 			)
