@@ -29329,6 +29329,17 @@
 			(justify left bottom)
 		)
 	)
+	(gr_text "PSOM Connection"
+		(at 175 96.2 90)
+		(layer "F.SilkS")
+		(uuid "2221ac9f-fe41-4794-ba6c-7e0fd12e7ab5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.153)
+			)
+		)
+	)
 	(gr_text "GND"
 		(at 140.85 103.3 -90)
 		(layer "F.SilkS" knockout)
