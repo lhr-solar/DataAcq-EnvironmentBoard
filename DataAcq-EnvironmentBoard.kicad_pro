@@ -523,6 +523,14 @@
       {
         "netclass": "PWR/GND2",
         "pattern": "GNDPWR"
+      },
+      {
+        "netclass": "PWR/GND",
+        "pattern": "/3.3-out"
+      },
+      {
+        "netclass": "PWR/GND",
+        "pattern": "/VDDA-out"
       }
     ]
   },
