@@ -3764,16 +3764,6 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 143.51) (xy 77.47 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0dcd7158-1926-4800-96ab-c4a9600d080d")
-	)
-	(wire
-		(pts
 			(xy 191.77 166.37) (xy 203.2 166.37)
 		)
 		(stroke
@@ -3831,16 +3821,6 @@
 			(type default)
 		)
 		(uuid "202e1aab-e248-48e0-bf25-3687a4dfcf12")
-	)
-	(wire
-		(pts
-			(xy 45.72 170.18) (xy 48.26 170.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "241d8b2b-ce5c-4994-88bd-d72d8cf49aa5")
 	)
 	(wire
 		(pts
@@ -3921,16 +3901,6 @@
 			(type default)
 		)
 		(uuid "30cafd12-1d11-4acc-8753-0daead44e7ac")
-	)
-	(wire
-		(pts
-			(xy 74.93 151.13) (xy 77.47 151.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "31e287d6-8f2d-4768-ba91-ac30d9c74b3c")
 	)
 	(wire
 		(pts
@@ -4061,16 +4031,6 @@
 			(type default)
 		)
 		(uuid "49e4ceea-8906-47db-bed3-1f6aa490d7df")
-	)
-	(wire
-		(pts
-			(xy 74.93 158.75) (xy 77.47 158.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4dacf375-4d51-483b-9131-b7c1553e7863")
 	)
 	(wire
 		(pts
@@ -4651,16 +4611,6 @@
 			(type default)
 		)
 		(uuid "cbbd707f-d386-4084-8c66-dfb5174ade15")
-	)
-	(wire
-		(pts
-			(xy 74.93 166.37) (xy 77.47 166.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ccb70dd9-f985-42e7-812e-e64e75176de0")
 	)
 	(wire
 		(pts
@@ -5399,17 +5349,6 @@
 		)
 		(uuid "216b0675-59f4-4cd0-8406-1969bb110024")
 	)
-	(label "I2C1_SCL"
-		(at 77.47 151.13 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "23febf89-d1b2-4d79-bbda-854b73b1290b")
-	)
 	(label "I2C1_SDA"
 		(at 171.45 115.57 180)
 		(fields_autoplaced yes)
@@ -5455,17 +5394,6 @@
 		(uuid "3d727ab0-eb5e-448f-9596-0bf04ea67bd8")
 	)
 	(label "I2C1_SDA"
-		(at 77.47 143.51 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "3e51d2a0-4f37-423e-8699-8c237edfadcb")
-	)
-	(label "I2C1_SDA"
 		(at 107.95 171.45 180)
 		(fields_autoplaced yes)
 		(effects
@@ -5497,17 +5425,6 @@
 			(justify left bottom)
 		)
 		(uuid "4dacdc40-1c2a-4a67-b22f-1de8d1b57134")
-	)
-	(label "PA1(ADC)"
-		(at 48.26 170.18 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "4fc585a4-5a5a-4108-ba0f-e11ec033743f")
 	)
 	(label "I2C1_SDA"
 		(at 191.77 173.99 0)
@@ -5575,17 +5492,6 @@
 		)
 		(uuid "75ff0c73-fc57-48c5-a24e-7e655e8e7d65")
 	)
-	(label "I2C2_SCL"
-		(at 77.47 166.37 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "980876dd-8b12-4bf9-af7b-0bcc4f600637")
-	)
 	(label "I2C1_SCL"
 		(at 29.21 60.96 0)
 		(fields_autoplaced yes)
@@ -5607,17 +5513,6 @@
 			(justify left bottom)
 		)
 		(uuid "abb6827b-0f7d-4c54-9bd9-1ae7a25991c7")
-	)
-	(label "I2C2_SDA"
-		(at 77.47 158.75 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "b0f1f5a3-f91a-4d35-8991-9da90f6feb75")
 	)
 	(label "3.3-out"
 		(at 191.77 166.37 0)
@@ -6211,172 +6106,6 @@
 			(project "DataAcq-EnvironmentBoard"
 				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
 					(reference "#PWR022")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 74.93 158.75 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "224d3ce8-9b6c-4231-a5ba-9736d1aab317")
-		(property "Reference" "TP8"
-			(at 71.628 153.67 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 71.628 156.21 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 74.93 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 74.93 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 74.93 158.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "PN" ""
-			(at 74.93 158.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "p/n" ""
-			(at 74.93 158.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "60b8b330-cfbf-4b89-99d2-185990db2190")
-		)
-		(instances
-			(project "DataAcq-EnvironmentBoard"
-				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
-					(reference "TP8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 74.93 143.51 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "23d251e0-a81c-4afc-8337-81984a84840f")
-		(property "Reference" "TP6"
-			(at 71.628 138.43 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 71.628 140.97 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 74.93 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 74.93 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 74.93 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "PN" ""
-			(at 74.93 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "p/n" ""
-			(at 74.93 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3452b3a3-2261-4e80-bca2-7b37edd95e90")
-		)
-		(instances
-			(project "DataAcq-EnvironmentBoard"
-				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
-					(reference "TP6")
 					(unit 1)
 				)
 			)
@@ -8202,89 +7931,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 74.93 166.37 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "794ecf52-0817-4c76-b5a8-1a8c2686f110")
-		(property "Reference" "TP9"
-			(at 71.628 161.29 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 71.628 163.83 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 74.93 161.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 74.93 161.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 74.93 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "PN" ""
-			(at 74.93 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "p/n" ""
-			(at 74.93 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9ee49bf6-c2eb-487c-a9c9-99d47c7f783b")
-		)
-		(instances
-			(project "DataAcq-EnvironmentBoard"
-				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
-					(reference "TP9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GNDA")
 		(at 196.85 181.61 0)
 		(unit 1)
@@ -8828,89 +8474,6 @@
 			(project "DataAcq-EnvironmentBoard"
 				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
 					(reference "#PWR012")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 45.72 170.18 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a4fee66e-66b1-4f65-b5bf-0f2db61fd555")
-		(property "Reference" "TP3"
-			(at 42.418 165.1 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 42.418 167.64 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 45.72 165.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 45.72 165.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 45.72 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "PN" ""
-			(at 45.72 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "p/n" ""
-			(at 45.72 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7a083159-bf3c-4d63-9c55-218e3cee4350")
-		)
-		(instances
-			(project "DataAcq-EnvironmentBoard"
-				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
-					(reference "TP3")
 					(unit 1)
 				)
 			)
@@ -10563,89 +10126,6 @@
 			(project "DataAcq-EnvironmentBoard"
 				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
 					(reference "#PWR019")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 74.93 151.13 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f0a7c79e-ba78-43d4-bd17-8abdcd8c0135")
-		(property "Reference" "TP7"
-			(at 71.628 146.05 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 71.628 148.59 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 74.93 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 74.93 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 74.93 151.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "PN" ""
-			(at 74.93 151.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "p/n" ""
-			(at 74.93 151.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "37254198-30d5-496c-a060-e4434ebeca1d")
-		)
-		(instances
-			(project "DataAcq-EnvironmentBoard"
-				(path "/bc5fb1f8-c603-414b-89d1-18cc156ddb66"
-					(reference "TP7")
 					(unit 1)
 				)
 			)
