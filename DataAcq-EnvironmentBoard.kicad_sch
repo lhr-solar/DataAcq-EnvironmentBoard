@@ -3681,16 +3681,16 @@
 		(uuid "c4abb7d3-f05b-4a31-9d8b-a2bade8b9fdd")
 	)
 	(no_connect
-		(at 215.9 173.99)
-		(uuid "c8ad7a70-d267-4dcf-a2fc-716d777a2d0f")
-	)
-	(no_connect
 		(at 160.02 134.62)
 		(uuid "cb90b5b7-a5c9-4d21-aab7-a52c9c13f86a")
 	)
 	(no_connect
 		(at 160.02 107.95)
 		(uuid "f17e18c3-fe23-4765-8818-30b18709ca75")
+	)
+	(no_connect
+		(at 203.2 168.91)
+		(uuid "fb638f74-f400-42cf-a723-c8ca73c5c5d2")
 	)
 	(wire
 		(pts
@@ -3784,16 +3784,6 @@
 	)
 	(wire
 		(pts
-			(xy 191.77 168.91) (xy 203.2 168.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "107c6347-7225-4edd-8db3-8350df1e6391")
-	)
-	(wire
-		(pts
 			(xy 99.06 184.15) (xy 110.49 184.15)
 		)
 		(stroke
@@ -3851,6 +3841,16 @@
 			(type default)
 		)
 		(uuid "241d8b2b-ce5c-4994-88bd-d72d8cf49aa5")
+	)
+	(wire
+		(pts
+			(xy 215.9 173.99) (xy 227.33 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "25385599-0a96-4cf9-8ff4-760af1579ff6")
 	)
 	(wire
 		(pts
@@ -4351,16 +4351,6 @@
 			(type default)
 		)
 		(uuid "875565b3-3dd2-461e-83ae-1973b26d744a")
-	)
-	(wire
-		(pts
-			(xy 191.77 173.99) (xy 203.2 173.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "87e7deac-e0b3-4019-bfdb-2589e39db252")
 	)
 	(wire
 		(pts
@@ -4954,6 +4944,16 @@
 	)
 	(wire
 		(pts
+			(xy 191.77 173.99) (xy 203.2 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4bc5d7c-e663-461e-a4c4-a4eaf7226225")
+	)
+	(wire
+		(pts
 			(xy 191.77 171.45) (xy 203.2 171.45)
 		)
 		(stroke
@@ -5356,17 +5356,6 @@
 		(uuid "126df1cf-e722-4ac2-94b4-353baf693dfe")
 	)
 	(label "PA1(ADC)"
-		(at 191.77 173.99 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "146a071d-d09a-4108-a62a-66a247b46b6d")
-	)
-	(label "PA1(ADC)"
 		(at 171.45 105.41 180)
 		(fields_autoplaced yes)
 		(effects
@@ -5519,6 +5508,17 @@
 			(justify left bottom)
 		)
 		(uuid "4fc585a4-5a5a-4108-ba0f-e11ec033743f")
+	)
+	(label "I2C1_SDA"
+		(at 191.77 173.99 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "53ba5f4e-d08f-4ebe-8d6f-3ccb82cfaa2a")
 	)
 	(label "AFLW_TP2"
 		(at 154.94 54.61 0)
@@ -5685,17 +5685,6 @@
 		)
 		(uuid "de4dcd05-3f14-413c-b648-f1ce355ca394")
 	)
-	(label "I2C1_SDA"
-		(at 191.77 168.91 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "f0c59fe4-f572-4706-883c-5fe4c35e9a64")
-	)
 	(label "PA1(ADC)"
 		(at 265.43 55.88 180)
 		(fields_autoplaced yes)
@@ -5739,6 +5728,17 @@
 			(justify left bottom)
 		)
 		(uuid "f518dead-c8b6-4032-b3ab-17891cf7b307")
+	)
+	(label "PA1(ADC)"
+		(at 227.33 173.99 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "fcbc29aa-298f-43eb-be66-a3e302f5cd14")
 	)
 	(label "I2C2_SDA"
 		(at 142.24 171.45 180)
