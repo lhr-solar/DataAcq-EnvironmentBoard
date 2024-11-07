@@ -3,4 +3,5 @@ The Data Acquisition Environment Board measures environmental data throughout th
 
 TODO: Add connectors/pinout guide, testpoints, bom, schematic, pcb, etc. 
 
-Mouser Cart: https://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=8ee8a5626d
+Mouser Cart: https://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=8fef7b51e5
+
