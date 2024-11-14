@@ -26,7 +26,10 @@ UART_HandleTypeDef huart3;
 
 /* USER CODE BEGIN PV */
 
-uint8_t TX_Buffer[] = "A"; // DATA to send
+uint8_t TX_Buffer[1] = {0xFD}; // DATA to send
+uint8_t RX_Buffer[6];          // DATA to receive
+uint16_t temp_ticks;
+uint16_t temp_degC;
 
 /* USER CODE END PV */
 
@@ -43,15 +46,40 @@ int main(void)
     /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
     HAL_Init();
 
-    /* Configure the system clock */
-    SystemClock_Config();
+    GPIO_InitTypeDef led_config = {
+        .Mode = GPIO_MODE_OUTPUT_PP,
+        .Pull = GPIO_NOPULL,
+        .Pin = GPIO_PIN_0 | GPIO_PIN_7 | GPIO_PIN_14};
+
+    __HAL_RCC_GPIOB_CLK_ENABLE(); // enable clock for GPIOB
+
+    HAL_GPIO_Init(GPIOB, &led_config); // initialize GPIOB with led_config
 
     /* Initialize all configured peripherals */
     MX_I2C1_Init();
 
     /* USER CODE BEGIN 2 */
-    HAL_I2C_Master_Transmit(&hi2c1, 20, TX_Buffer, 1, 1000); // Sending in Blocking mode
-    HAL_Delay(100);
+
+    while (1)
+    {
+        HAL_Delay(1000);
+
+        HAL_I2C_Master_Transmit(&hi2c1, (uint16_t)(0x44 << 1), TX_Buffer, sizeof TX_Buffer, 1000); // Sending in Blocking mode
+        HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
+
+        HAL_I2C_Master_Receive(&hi2c1, (uint16_t)(0x44 << 1), RX_Buffer, sizeof RX_Buffer, 50);
+        HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_7);
+
+        temp_ticks = (RX_Buffer[0] * 256) + RX_Buffer[1];
+        temp_degC = -45 + (175 * temp_ticks / 65535);
+
+        HAL_Delay(1000);
+        HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
+        HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_7);
+    }
+
+    return 0;
+
     /* USER CODE END 2 */
 }
 
@@ -79,25 +107,30 @@ static void MX_I2C1_Init(void)
     hi2c1.Init.OwnAddress2 = 0;
     hi2c1.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
     hi2c1.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
-    
-    if (HAL_I2C_Init(&hi2c1) != HAL_OK)
-    {
-        Error_Handler();
-    }
+
+    HAL_I2C_Init(&hi2c1);
+
+    /*    if (HAL_I2C_Init(&hi2c1) != HAL_OK)
+        {
+            Error_Handler();
+        }*/
+
+    HAL_I2CEx_ConfigAnalogFilter(&hi2c1, I2C_ANALOGFILTER_ENABLE);
 
     /** Configure Analogue filter
-     */
     if (HAL_I2CEx_ConfigAnalogFilter(&hi2c1, I2C_ANALOGFILTER_ENABLE) != HAL_OK)
     {
         Error_Handler();
-    }
+    }*/
+
+    HAL_I2CEx_ConfigDigitalFilter(&hi2c1, 0);
 
     /** Configure Digital filter
-     */
     if (HAL_I2CEx_ConfigDigitalFilter(&hi2c1, 0) != HAL_OK)
     {
         Error_Handler();
-    }
+    }*/
+
     /* USER CODE BEGIN I2C1_Init 2 */
 
     /* USER CODE END I2C1_Init 2 */
@@ -114,6 +147,7 @@ void Error_Handler(void)
     __disable_irq();
     while (1)
     {
+        /* TODO: add some useful error message for when HAL error occurs */
     }
     /* USER CODE END Error_Handler_Debug */
 }
