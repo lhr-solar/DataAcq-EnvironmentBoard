@@ -30,6 +30,8 @@ uint8_t TX_Buffer[1] = {0xFD}; // DATA to send
 uint8_t RX_Buffer[6];          // DATA to receive
 uint16_t temp_ticks;
 uint16_t temp_degC;
+uint16_t rh_ticks;
+uint16_t rh_percentRH;
 
 /* USER CODE END PV */
 
@@ -46,6 +48,7 @@ int main(void)
     /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
     HAL_Init();
 
+    // LED config for debug
     GPIO_InitTypeDef led_config = {
         .Mode = GPIO_MODE_OUTPUT_PP,
         .Pull = GPIO_NOPULL,
@@ -53,7 +56,7 @@ int main(void)
 
     __HAL_RCC_GPIOB_CLK_ENABLE(); // enable clock for GPIOB
 
-    HAL_GPIO_Init(GPIOB, &led_config); // initialize GPIOB with led_config
+    HAL_GPIO_Init(GPIOB, &led_config); // initialize GPIOB with led_config for debug
 
     /* Initialize all configured peripherals */
     MX_I2C1_Init();
@@ -70,10 +73,17 @@ int main(void)
         HAL_I2C_Master_Receive(&hi2c1, (uint16_t)(0x44 << 1), RX_Buffer, sizeof RX_Buffer, 50);
         HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_7);
 
+        // TODO: Implement checksum to verify data is read correctly - this will be important when we use the breakout boards as that may introduce noise on i2c bus
+
+        // parse received data for temperature
         temp_ticks = (RX_Buffer[0] * 256) + RX_Buffer[1];
         temp_degC = -45 + (175 * temp_ticks / 65535);
 
-        HAL_Delay(1000);
+        // parse received data for relative humidity
+        rh_ticks = (RX_Buffer[3] * 256) + RX_Buffer[4];
+        rh_percentRH = -6 + (125 * rh_ticks / 65535);
+
+        HAL_Delay(1000); // this delay is for debug, prod should not require delay
         HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
         HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_7);
     }
@@ -90,14 +100,7 @@ int main(void)
  */
 static void MX_I2C1_Init(void)
 {
-
-    /* USER CODE BEGIN I2C1_Init 0 */
-
-    /* USER CODE END I2C1_Init 0 */
-
-    /* USER CODE BEGIN I2C1_Init 1 */
-
-    /* USER CODE END I2C1_Init 1 */
+    // init i2c parameters
     hi2c1.Instance = I2C1;
     hi2c1.Init.ClockSpeed = 100000;
     hi2c1.Init.DutyCycle = I2C_DUTYCYCLE_2;
@@ -107,6 +110,9 @@ static void MX_I2C1_Init(void)
     hi2c1.Init.OwnAddress2 = 0;
     hi2c1.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
     hi2c1.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+
+    // TODO: all errors are currently being ignored bc it always throws? for some reason
+    // need to fix with proper error handling
 
     HAL_I2C_Init(&hi2c1);
 
@@ -130,10 +136,6 @@ static void MX_I2C1_Init(void)
     {
         Error_Handler();
     }*/
-
-    /* USER CODE BEGIN I2C1_Init 2 */
-
-    /* USER CODE END I2C1_Init 2 */
 }
 
 /**
@@ -142,12 +144,9 @@ static void MX_I2C1_Init(void)
  */
 void Error_Handler(void)
 {
-    /* USER CODE BEGIN Error_Handler_Debug */
-    /* User can add his own implementation to report the HAL error return state */
     __disable_irq();
     while (1)
     {
         /* TODO: add some useful error message for when HAL error occurs */
     }
-    /* USER CODE END Error_Handler_Debug */
 }
