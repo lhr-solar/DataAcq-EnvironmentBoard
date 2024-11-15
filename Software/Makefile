@@ -13,7 +13,7 @@ NC=\033[0m # No Color
 #----------------------------
 # Project Configuration
 TEST ?= main
-PROJECT_TARGET ?= stm32f429zit
+PROJECT_TARGET ?= stm32f446ret
 
 # source and include directories
 PROJECT_C_SOURCES = $(wildcard */Src/*.c)

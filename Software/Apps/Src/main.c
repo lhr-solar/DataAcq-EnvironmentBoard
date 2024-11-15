@@ -52,11 +52,12 @@ int main(void)
     GPIO_InitTypeDef led_config = {
         .Mode = GPIO_MODE_OUTPUT_PP,
         .Pull = GPIO_NOPULL,
-        .Pin = GPIO_PIN_0 | GPIO_PIN_7 | GPIO_PIN_14};
+        .Pin = GPIO_PIN_5};
 
+    __HAL_RCC_GPIOA_CLK_ENABLE(); // enable clock for GPIOA
     __HAL_RCC_GPIOB_CLK_ENABLE(); // enable clock for GPIOB
 
-    HAL_GPIO_Init(GPIOB, &led_config); // initialize GPIOB with led_config for debug
+    HAL_GPIO_Init(GPIOA, &led_config); // initialize GPIOA with led_config for debug
 
     /* Initialize all configured peripherals */
     MX_I2C1_Init();
@@ -65,13 +66,13 @@ int main(void)
 
     while (1)
     {
-        HAL_Delay(1000);
+        // reset temp/rh vars
+        temp_ticks = 0;
+        rh_ticks = 0;
 
         HAL_I2C_Master_Transmit(&hi2c1, (uint16_t)(0x44 << 1), TX_Buffer, sizeof TX_Buffer, 1000); // Sending in Blocking mode
-        HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
-
+        HAL_Delay(10); // wait for 0.01 seconds (datasheet value) for response from sensor
         HAL_I2C_Master_Receive(&hi2c1, (uint16_t)(0x44 << 1), RX_Buffer, sizeof RX_Buffer, 50);
-        HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_7);
 
         // TODO: Implement checksum to verify data is read correctly - this will be important when we use the breakout boards as that may introduce noise on i2c bus
 
@@ -82,10 +83,6 @@ int main(void)
         // parse received data for relative humidity
         rh_ticks = (RX_Buffer[3] * 256) + RX_Buffer[4];
         rh_percentRH = -6 + (125 * rh_ticks / 65535);
-
-        HAL_Delay(1000); // this delay is for debug, prod should not require delay
-        HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
-        HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_7);
     }
 
     return 0;
