@@ -20,7 +20,7 @@
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
-#include "main.h"
+#include "I2C_test.h"
 
 /**
  * @brief I2C MSP Initialization

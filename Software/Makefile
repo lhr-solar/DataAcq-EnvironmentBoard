@@ -32,12 +32,7 @@ BUILD_MAKEFILE_DIR = Embedded-Sharepoint
 
 # path files
 MAKEFILE_DIR = $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
-ifneq ($(TEST), main)
-PROJECT_C_SOURCES := $(filter-out Apps/Src/main.c, $(PROJECT_C_SOURCES))
-PROJECT_C_SOURCES := $(addprefix $(MAKEFILE_DIR)/, $(PROJECT_C_SOURCES) Tests/$(TEST).c)
-else
 PROJECT_C_SOURCES := $(addprefix $(MAKEFILE_DIR)/, $(PROJECT_C_SOURCES))
-endif
 
 # debug
 ifeq ($(PRINT_DEBUGS), true)
@@ -65,7 +60,7 @@ else
 endif
 build_code:
 ifneq ($(TEST), main)
-	@echo "Making STM32 build for ${BLUE}TEST=${PURPLE} ${TEST}${NC}"
+	@echo "Making STM32 build for ${BLUE}TEST =${PURPLE} ${TEST}${NC}"
 else
 	@echo "Making STM32 build with ${ORANGE}no test.${NC}"
 endif
