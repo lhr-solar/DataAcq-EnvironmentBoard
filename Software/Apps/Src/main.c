@@ -11,13 +11,12 @@ I2C_HandleTypeDef hi2c1;
 
 // Initialize variables
 uint8_t TX_Buffer[1] = {0xFD}; // Data to send to request reading from humidity sensor
-uint8_t RX_Buffer[6];          // Data received from humidity sensor
 uint8_t tx_data[8];
 
 uint16_t temp_ticks;
-uint16_t temp_degC;
+uint8_t temp_degC;
 uint16_t rh_ticks;
-uint16_t rh_percentRH;
+uint8_t rh_percentRH;
 
 StaticTask_t task_buffer;
 StackType_t taskStack[configMINIMAL_STACK_SIZE];
@@ -126,32 +125,34 @@ static void MX_I2C1_Init(void)
     hi2c1.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
     hi2c1.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
 
-    // TODO: all errors are currently being ignored bc it always throws? for some reason
-    // need to fix with proper error handling
+    // error handling disabled since we don't know which sensors will be soldered onto each board
+    // if a sensor isn't present, expected behavior is to pad with zeros (no error msg)
+
     HAL_I2C_Init(&hi2c1);
 
-    /*    if (HAL_I2C_Init(&hi2c1) != HAL_OK)
-        {
-            error_handler();
-        }*/
-
-    HAL_I2CEx_ConfigAnalogFilter(&hi2c1, I2C_ANALOGFILTER_ENABLE);
-
-    /** Configure Analogue filter
-    if (HAL_I2CEx_ConfigAnalogFilter(&hi2c1, I2C_ANALOGFILTER_ENABLE) != HAL_OK)
+    /*if (HAL_I2C_Init(&hi2c1) != HAL_OK)
     {
         error_handler();
     }*/
 
+    // Configure Analog filter
+    HAL_I2CEx_ConfigAnalogFilter(&hi2c1, I2C_ANALOGFILTER_ENABLE);
+
+    /*if (HAL_I2CEx_ConfigAnalogFilter(&hi2c1, I2C_ANALOGFILTER_ENABLE) != HAL_OK)
+    {
+        error_handler();
+    }*/
+
+    // Configure Digital filter
     HAL_I2CEx_ConfigDigitalFilter(&hi2c1, 0);
 
-    /** Configure Digital filter
-    if (HAL_I2CEx_ConfigDigitalFilter(&hi2c1, 0) != HAL_OK)
+    /*if (HAL_I2CEx_ConfigDigitalFilter(&hi2c1, 0) != HAL_OK)
     {
         error_handler();
     }*/
 }
 
+// for when actual errors are encountered - mainly CAN transmission
 static void error_handler(void)
 {
     while (1)
@@ -159,6 +160,7 @@ static void error_handler(void)
     }
 }
 
+// blinks LED upon successful CAN transmission
 static void success_handler(void)
 {
     GPIO_InitTypeDef led_init = {
@@ -182,6 +184,7 @@ static void task(void *pvParameters)
         // reset temp/rh vars
         temp_ticks = 0;
         rh_ticks = 0;
+        uint8_t RX_Buffer[6] = {0};          // Data received from humidity sensor
 
         HAL_I2C_Master_Transmit(&hi2c1, (uint16_t)(0x44 << 1), TX_Buffer, sizeof TX_Buffer, 1000); // Sending in Blocking mode
         HAL_Delay(10);                                                                             // wait for 0.01 seconds (datasheet value) for response from sensor
@@ -205,7 +208,17 @@ static void task(void *pvParameters)
         tx_header.DLC = 2;
         tx_header.TransmitGlobalTime = DISABLE;
 
-        // send temperature/humidity payloads to 0x1
+        // payload format (bytes):
+        // 0 - Temperature reading from SHT45 (Degrees C)
+        // 1 - Relative Humidity reading from SHT45 (%RH)
+        // 2 - Padding zeros
+        // 3 - Airflow reading from FS-3000 (m/s)
+        // 4 - Padding zeros
+        // 5 - Temperature reading from LMT87 (Degrees C)
+        // 6 - Padding zeros
+        // 7 - Padding zeros
+
+        // set payloads
         tx_data[0] = temp_degC;
         tx_data[1] = rh_percentRH;
 
