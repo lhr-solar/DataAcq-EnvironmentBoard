@@ -37,3 +37,4 @@ Production/
 
 # Backups
 DataAcq-EnvironmentBoard-backups/*
+.vscode/*
