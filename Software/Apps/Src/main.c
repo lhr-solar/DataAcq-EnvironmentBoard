@@ -13,19 +13,19 @@ I2C_HandleTypeDef hi2c1;
 
 // Initialize variables
 uint8_t TX_Buffer[1] = {0xFD}; // Data to send to request reading from humidity sensor
-uint8_t tx_data[8];
+uint8_t tx_data[8]; // CAN transmission payload
 
-uint16_t temp_ticks;
-uint8_t temp_degC;
-uint16_t rh_ticks;
-uint8_t rh_percentRH;
+uint16_t temp_ticks; // raw temp data received from SHT45
+uint8_t temp_degC; // temp value in celsius
+uint16_t rh_ticks; // raw rh data received from SHT45
+uint8_t rh_percentRH; // rh value as percentage
 
-uint16_t checksum_temp;
-uint16_t checksum_rh;
-const uint16_t crc_poly = 0x31;
-const uint16_t crc_initial = 0xFF;
+uint16_t checksum_temp; // checksum for temp received from SHT45
+uint16_t checksum_rh; // checksum for rh receievd from SHT45
+const uint16_t crc_poly = 0x31; // polynomial used to calculate checksum for SHT45 (from datasheet)
+const uint16_t crc_initial = 0xFF; // initial CRC value for SHT45 (from datasheet)
 
-enum SHT45_CRC_Result
+enum SHT45_CRC_Result // potential values for CRC result for SHT45
 {
     VALID = 0,
     TEMP_VALID = 1,
@@ -45,7 +45,6 @@ static void task(void *pvParameters);
 static void error_handler(void);
 static void success_handler(void);
 static enum SHT45_CRC_Result SHT45_CRC(uint8_t RX_Buffer[6]);
-// TODO: enum for return vals of CRC calculations
 
 int main(void)
 {
