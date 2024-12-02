@@ -13,16 +13,16 @@ I2C_HandleTypeDef hi2c1;
 
 // Initialize variables
 uint8_t TX_Buffer[1] = {0xFD}; // Data to send to request reading from humidity sensor
-uint8_t tx_data[8]; // CAN transmission payload
+uint8_t tx_data[8];            // CAN transmission payload
 
-uint16_t temp_ticks; // raw temp data received from SHT45
-uint8_t temp_degC; // temp value in celsius
-uint16_t rh_ticks; // raw rh data received from SHT45
+uint16_t temp_ticks;  // raw temp data received from SHT45
+uint8_t temp_degC;    // temp value in celsius
+uint16_t rh_ticks;    // raw rh data received from SHT45
 uint8_t rh_percentRH; // rh value as percentage
 
-uint16_t checksum_temp; // checksum for temp received from SHT45
-uint16_t checksum_rh; // checksum for rh receievd from SHT45
-const uint16_t crc_poly = 0x31; // polynomial used to calculate checksum for SHT45 (from datasheet)
+uint16_t checksum_temp;            // checksum for temp received from SHT45
+uint16_t checksum_rh;              // checksum for rh receievd from SHT45
+const uint16_t crc_poly = 0x31;    // polynomial used to calculate checksum for SHT45 (from datasheet)
 const uint16_t crc_initial = 0xFF; // initial CRC value for SHT45 (from datasheet)
 
 enum SHT45_CRC_Result // potential values for CRC result for SHT45
@@ -157,6 +157,54 @@ static void error_handler(void)
     }
 }
 
+// poll SHT45 sensor for temperature and relative humidity, return zeros upon error
+static void poll_SHT45()
+{
+    // reset temp/rh vars
+    temp_ticks = 0;
+    rh_ticks = 0;
+    uint8_t RX_Buffer[6] = {0}; // Data received from humidity sensor
+
+    HAL_I2C_Master_Transmit(&hi2c1, (uint16_t)(0x44 << 1), TX_Buffer, sizeof TX_Buffer, 1000); // Sending in Blocking mode
+    HAL_Delay(10);                                                                             // wait for 0.01 seconds (datasheet value) for response from sensor
+    HAL_I2C_Master_Receive(&hi2c1, (uint16_t)(0x44 << 1), RX_Buffer, sizeof RX_Buffer, 50);
+
+    // parse received data for temperature
+    temp_ticks = (RX_Buffer[0] * 256) + RX_Buffer[1];
+    temp_degC = (-45 + (175 * temp_ticks / 65535));
+
+    // parse received data for relative humidity
+    rh_ticks = (RX_Buffer[3] * 256) + RX_Buffer[4];
+    rh_percentRH = (-6 + (125 * rh_ticks / 65535));
+
+    // if percent rh is < 0, set to 0. if percent rh is > 100, set to 100 (expected behavior from SHT45 datasheet)
+    if (rh_percentRH < 0)
+    {
+        rh_percentRH = 0;
+    }
+    else if (rh_percentRH > 100)
+    {
+        rh_percentRH = 100;
+    }
+
+    // handle CRC result
+    enum SHT45_CRC_Result SHT45_valid = SHT45_CRC(RX_Buffer); // calculate and verify CRC - returns value according to enum above
+    // any invalid values are sent as zeros as per DataAcq specs
+    if (SHT45_valid == TEMP_VALID)
+    {
+        rh_percentRH = 0;
+    }
+    else if (SHT45_valid == RH_VALID)
+    {
+        temp_degC = 0;
+    }
+    else if (SHT45_valid == INVALID)
+    {
+        temp_degC = 0;
+        rh_percentRH = 0;
+    }
+}
+
 // calculate and verify CRC-8 for the SHT45 humidity sensor
 static enum SHT45_CRC_Result SHT45_CRC(uint8_t RX_Buffer[6])
 {
@@ -175,7 +223,7 @@ static enum SHT45_CRC_Result SHT45_CRC(uint8_t RX_Buffer[6])
     // checksum_temp = 0x92;
 
     // manually implemented using algo at https://www.st.com/resource/en/application_note/an4187-using-the-crc-peripheral-on-stm32-microcontrollers-stmicroelectronics.pdf
-    // sequentially - do the crc for first byte first and then use that val as input data for the crc for second byte and should give you proper value, verify this with what we actually recieve from the sensor
+    // sequentially (thanks chatgpt :D) - do the crc for first byte first and then use that val as input data for the crc for second byte and should give you proper value, verify this with what we actually recieve from the sensor
 
     computed_temp_crc = crc_initial ^ RX_Buffer[0]; // 1st step of CRC for 1st temp byte
 
@@ -272,6 +320,35 @@ static enum SHT45_CRC_Result SHT45_CRC(uint8_t RX_Buffer[6])
     return SHT45_valid;
 }
 
+// package and send CAN payload according to environment specs
+static void send_payload_CAN()
+{
+    // create CAN payload to send data on DataAcq CAN bus
+    CAN_TxHeaderTypeDef tx_header = {0};
+    tx_header.StdId = 0x200; // base address of environment board (starts at x200) - TODO: put in header file for portability?
+    tx_header.RTR = CAN_RTR_DATA;
+    tx_header.IDE = CAN_ID_STD;
+    tx_header.DLC = 2;
+    tx_header.TransmitGlobalTime = DISABLE;
+
+    // payload format (bytes) - TODO: make sure this goes in docs somewhere:
+    // 0 - Temperature reading from SHT45 (Degrees C)
+    // 1 - Relative Humidity reading from SHT45 (%RH)
+    // 2 - Padding zeros
+    // 3 - Airflow reading from FS-3000 (m/s)
+    // 4 - Padding zeros
+    // 5 - Temperature reading from LMT87 (Degrees C)
+    // 6 - Padding zeros
+    // 7 - Padding zeros
+
+    // set payloads
+    tx_data[0] = temp_degC;
+    tx_data[1] = rh_percentRH;
+
+    if (can_send(hcan1, &tx_header, tx_data, true) != CAN_SENT)
+        error_handler();
+}
+
 // blinks LED upon successful CAN transmission
 static void success_handler(void)
 {
@@ -291,80 +368,12 @@ static void success_handler(void)
 
 static void task(void *pvParameters)
 {
-
     // TODO: organize into functions for humidity, airflow, checksum, pack/send msg, etc
 
     while (1)
     {
-        // reset temp/rh vars
-        temp_ticks = 0;
-        rh_ticks = 0;
-        uint8_t RX_Buffer[6] = {0}; // Data received from humidity sensor
-
-        HAL_I2C_Master_Transmit(&hi2c1, (uint16_t)(0x44 << 1), TX_Buffer, sizeof TX_Buffer, 1000); // Sending in Blocking mode
-        HAL_Delay(10);                                                                             // wait for 0.01 seconds (datasheet value) for response from sensor
-        HAL_I2C_Master_Receive(&hi2c1, (uint16_t)(0x44 << 1), RX_Buffer, sizeof RX_Buffer, 50);
-
-        // parse received data for temperature
-        temp_ticks = (RX_Buffer[0] * 256) + RX_Buffer[1];
-        temp_degC = (-45 + (175 * temp_ticks / 65535));
-
-        // parse received data for relative humidity
-        rh_ticks = (RX_Buffer[3] * 256) + RX_Buffer[4];
-        rh_percentRH = (-6 + (125 * rh_ticks / 65535));
-
-        // if percent rh is < 0, set to 0. if percent rh is > 100, set to 100 (expected behavior from SHT45 datasheet)
-        if (rh_percentRH < 0)
-        {
-            rh_percentRH = 0;
-        }
-        else if (rh_percentRH > 100)
-        {
-            rh_percentRH = 100;
-        }
-
-        // handle CRC result
-        enum SHT45_CRC_Result SHT45_valid = SHT45_CRC(RX_Buffer); // calculate and verify CRC - returns value according to enum above
-        // any invalid values are sent as zeros as per DataAcq specs
-        if (SHT45_valid == TEMP_VALID)
-        {
-            rh_percentRH = 0;
-        }
-        else if (SHT45_valid == RH_VALID)
-        {
-            temp_degC = 0;
-        }
-        else if (SHT45_valid == INVALID)
-        {
-            temp_degC = 0;
-            rh_percentRH = 0;
-        }
-
-        // create CAN payload to send data on DataAcq CAN bus
-        CAN_TxHeaderTypeDef tx_header = {0};
-        tx_header.StdId = 0x200; // base address of environment board (starts at x200)
-        tx_header.RTR = CAN_RTR_DATA;
-        tx_header.IDE = CAN_ID_STD;
-        tx_header.DLC = 2;
-        tx_header.TransmitGlobalTime = DISABLE;
-
-        // payload format (bytes):
-        // 0 - Temperature reading from SHT45 (Degrees C)
-        // 1 - Relative Humidity reading from SHT45 (%RH)
-        // 2 - Padding zeros
-        // 3 - Airflow reading from FS-3000 (m/s)
-        // 4 - Padding zeros
-        // 5 - Temperature reading from LMT87 (Degrees C)
-        // 6 - Padding zeros
-        // 7 - Padding zeros
-
-        // set payloads
-        tx_data[0] = temp_degC;
-        tx_data[1] = rh_percentRH;
-
-        if (can_send(hcan1, &tx_header, tx_data, true) != CAN_SENT)
-            error_handler();
-
-        success_handler();
+        poll_SHT45();       // poll SHT45 sensor for temp/rh values
+        send_payload_CAN(); // package and send CAN payload according to environment specs
+        success_handler();  // blink LED upon successful message transmission
     }
 }
