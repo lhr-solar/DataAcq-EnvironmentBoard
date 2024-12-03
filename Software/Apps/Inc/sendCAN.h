@@ -1,5 +1,7 @@
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __SHT45_H
-#define __SHT45_H
+#ifndef __sendCAN_H
+#define __sendCAN_H
+
+
 
 #endif
