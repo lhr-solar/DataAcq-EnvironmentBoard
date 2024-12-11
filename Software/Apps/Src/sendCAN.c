@@ -1,4 +1,5 @@
-// what does this file do.....
+// driver for STM32 CAN peripheral
+// provides functions to initialize CAN bus and package/send sensor data
 
 /* Includes ------------------------------------------------------------------*/
 #include <stdbool.h>

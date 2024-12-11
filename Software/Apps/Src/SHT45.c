@@ -18,7 +18,7 @@ uint16_t rh_ticks;    // raw rh data received from SHT45
 uint8_t rh_percentRH; // rh value as percentage
 
 uint16_t checksum_temp;            // checksum for temp received from SHT45
-uint16_t checksum_rh;              // checksum for rh receievd from SHT45
+uint16_t checksum_rh;              // checksum for rh received from SHT45
 const uint16_t crc_poly = 0x31;    // polynomial used to calculate checksum for SHT45 (from datasheet)
 const uint16_t crc_initial = 0xFF; // initial CRC value for SHT45 (from datasheet)
 
