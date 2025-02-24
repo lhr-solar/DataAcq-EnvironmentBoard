@@ -3794,7 +3794,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "1053091104`:MOLEX_1053091104"
+		(property "Footprint" "1053091104:MOLEX_1053091104"
 			(at 208.28 137.16 0)
 			(effects
 				(font
@@ -4428,7 +4428,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Fuse:Fuse_0603_1608Metric"
+		(property "Footprint" "Fuse:Fuse_1206_3216Metric"
 			(at 179.07 180.34 0)
 			(effects
 				(font
@@ -4438,7 +4438,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.com/ProductDetail/530-0ZCM0010FF2G"
+		(property "Datasheet" "https://www.littelfuse.com/assetdocs/resettable-ptcs-1206l-datasheet?assetguid=2b6a1515-d4ee-4c83-8bd4-152b4901b8f5"
 			(at 173.99 181.61 0)
 			(effects
 				(font
@@ -4456,7 +4456,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "0ZCM0010FF2G"
+		(property "P/N" "1206L010/60WR "
 			(at 173.99 181.61 0)
 			(effects
 				(font
@@ -5314,7 +5314,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "CRCW080522K1FKEA"
+		(property "P/N" ""
 			(at 80.01 99.06 0)
 			(effects
 				(font
@@ -6447,7 +6447,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "SDR10EZPF2200"
+		(property "P/N" ""
 			(at 91.44 99.06 0)
 			(effects
 				(font
