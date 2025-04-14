@@ -16,6 +16,8 @@ uint16_t airflow_count;    // raw airflow data from FS3000, combined as 12-bit i
 uint8_t airflow_result;    // measured airflow value in m/s
 uint8_t airflow_checksum;  // checksum for airflow received from FS3000
 
+uint8_t TX_Buffer_Aflw[1] = {0x28}; // Data to send to request reading from airflow sensor
+
 enum FS3000_Checksum_Result // potential values for checksum for FS3000
 {
     VALID = 0,
@@ -73,10 +75,11 @@ uint8_t poll_FS3000(void)
     airflow_result = 0;
     uint8_t RX_Buffer[5] = {0}; // Data received from airflow sensor
 
-    HAL_I2C_Master_Receive(&hi2c2, (uint16_t)(0x28 << 1), RX_Buffer, sizeof RX_Buffer, 50);
+    HAL_I2C_Master_Transmit(&hi2c2, (uint16_t)(0x28 << 1), TX_Buffer_Aflw, sizeof TX_Buffer_Aflw, 1000); // Sending in Blocking mode
+    HAL_Delay(150);
+    HAL_I2C_Master_Receive(&hi2c2, (uint16_t)(0x28 << 1), RX_Buffer, sizeof RX_Buffer, 150);
 
     // parse received data for airflow
-    // again idk how to do this useless ass datasheet
     airflow_high_byte = RX_Buffer[1];
     airflow_low_byte = RX_Buffer[2];
 

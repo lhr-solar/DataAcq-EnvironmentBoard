@@ -8,6 +8,7 @@
 // Initialize variables
 uint8_t final_temp; // final temp from SHT45
 uint8_t final_rh;   // final rh from SHT45
+uint8_t final_aflw; // final airflow from FS3000
 
 struct SHT45_Poll_Result // final temp/rh result of polling SHT45 sensor
 {
@@ -25,6 +26,7 @@ void MX_I2C2_Init(void);
 void MX_CAN_Init(void);
 
 struct SHT45_Poll_Result poll_SHT45(void);
+uint8_t poll_FS3000(void);
 
 void send_payload_CAN(uint8_t final_temp, uint8_t final_rh);
 
@@ -91,6 +93,8 @@ static void task(void *pvParameters)
     while (1)
     {
         struct SHT45_Poll_Result final_SHT45_result = poll_SHT45(); // poll SHT45 sensor for temp/rh values
+        final_aflw = poll_FS3000();                                 // poll FS3000 sensor for airflow value
+        final_aflw = final_aflw + 0;                                // remove this AHHHHHHHHH
         final_temp = final_SHT45_result.final_temp;
         final_rh = final_SHT45_result.final_rh;
 

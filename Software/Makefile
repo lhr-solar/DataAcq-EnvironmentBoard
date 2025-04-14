@@ -14,6 +14,7 @@ NC=\033[0m # No Color
 # Project Configuration
 TEST ?= main
 PROJECT_TARGET ?= stm32f446ret
+# TODO: make configurable for env (PSOM) or nucleo
 
 # source and include directories
 PROJECT_C_SOURCES = $(wildcard */Src/*.c)
@@ -33,14 +34,14 @@ BUILD_MAKEFILE_DIR = Embedded-Sharepoint
 # path files
 MAKEFILE_DIR = $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 PROJECT_C_SOURCES := $(addprefix $(MAKEFILE_DIR)/, $(PROJECT_C_SOURCES))
+PROJECT_C_INCLUDES := $(addprefix $(MAKEFILE_DIR)/, $(PROJECT_C_INCLUDES))
+PROJECT_BUILD_DIR := $(addprefix $(MAKEFILE_DIR)/, $(PROJECT_BUILD_DIR))
 
 # debug
 ifeq ($(PRINT_DEBUGS), true)
 $(info SOURCES: $(PROJECT_C_SOURCES))
 $(info INCLUDES: $(PROJECT_C_INCLUDES))
 endif
-PROJECT_C_INCLUDES := $(addprefix $(MAKEFILE_DIR)/, $(PROJECT_C_INCLUDES))
-PROJECT_BUILD_DIR := $(addprefix $(MAKEFILE_DIR)/, $(PROJECT_BUILD_DIR))
 
 # export variables 
 export PROJECT_TARGET
@@ -65,7 +66,7 @@ else
 	@echo "Making STM32 build with ${ORANGE}no test.${NC}"
 endif
 	$(MAKE) -C $(BUILD_MAKEFILE_DIR) all
-	@echo "${BLUE}Compiled for DataAcq Environment! Jolly Good :D${NC}"
+	@echo "${BLUE}Compiled for Telemetry Environment! Jolly Good :D${NC}"
 
 #-------------------------------
 # Help
@@ -81,7 +82,7 @@ help:
 	@echo "- For now, this will print the directories that will be compiled (can be useful for troubleshooting)."
 	
 #-------------- 
-# Documentation
-# .PHONY: docs
-# docs:
-# 	cd $(BUILD_MAKEFILE_DIR) && mkdocs serve
+#Documentation
+.PHONY: docs
+docs:
+	cd $(BUILD_MAKEFILE_DIR) && mkdocs serve
