@@ -5,16 +5,12 @@
 #include "main.h"
 #include "I2C.h"
 #include "stm32xx_hal.h"
-#include "SHT45.h"
+#include "FS3000.h"
 
 // Initialize variables
 I2C_HandleTypeDef hi2c2;
 
-uint8_t airflow_high_byte; // raw airflow data from FS3000, high byte
-uint8_t airflow_low_byte;  // raw airflow data from FS3000, low byte
-uint16_t airflow_count;    // raw airflow data from FS3000, combined as 12-bit integer
-uint8_t airflow_result;    // measured airflow value in m/s
-uint8_t airflow_checksum;  // checksum for airflow received from FS3000
+uint8_t TX_Buffer_Aflw[1] = {FS3000_I2C_ADDRESS}; // Data to send to request reading from airflow sensor
 
 enum FS3000_Checksum_Result // potential values for checksum for FS3000
 {
@@ -70,17 +66,20 @@ void MX_I2C2_Init(void)
 uint8_t poll_FS3000(void)
 {
     // reset airflow var
-    airflow_result = 0;
+    uint8_t airflow_result = 0;
     uint8_t RX_Buffer[5] = {0}; // Data received from airflow sensor
 
-    HAL_I2C_Master_Receive(&hi2c2, (uint16_t)(0x28 << 1), RX_Buffer, sizeof RX_Buffer, 50);
+    HAL_I2C_Master_Transmit(&hi2c2, (uint16_t)(0x28 << 1), TX_Buffer_Aflw, sizeof TX_Buffer_Aflw, 1000); // Sending in Blocking mode
+    HAL_Delay(150);
+    HAL_I2C_Master_Receive(&hi2c2, (uint16_t)(0x28 << 1), RX_Buffer, sizeof RX_Buffer, 150);
 
     // parse received data for airflow
-    // again idk how to do this useless ass datasheet
-    airflow_high_byte = RX_Buffer[1];
-    airflow_low_byte = RX_Buffer[2];
+    uint8_t airflow_high_byte = RX_Buffer[1];
+    uint8_t airflow_low_byte = RX_Buffer[2];
 
-    airflow_count = (airflow_high_byte << 12) | airflow_low_byte;
+    uint16_t airflow_count = (airflow_high_byte << 12) | airflow_low_byte;
+
+    airflow_result = airflow_count; // TODO: acutally do smth here....
 
     // some linreg to convert airflow values from datasheet to m/s
     // document this plssss
@@ -103,7 +102,7 @@ static enum FS3000_Checksum_Result FS3000_Checksum(uint8_t RX_Buffer[5])
     enum FS3000_Checksum_Result FS3000_valid = INVALID;                      // set result to INVALID by default
     uint8_t sum = RX_Buffer[2] + RX_Buffer[3] + RX_Buffer[4] + RX_Buffer[5]; // sum of bytes 2-5 of received data (everything except checksum)
 
-    airflow_checksum = RX_Buffer[0]; // first byte received is checksum
+    uint8_t airflow_checksum = RX_Buffer[0]; // first byte received is checksum
     airflow_checksum += sum;         // add sum of bytes 2-5 to received checksum
 
     // if the result of adding our sum to received checksum = 0x00, the data is valid

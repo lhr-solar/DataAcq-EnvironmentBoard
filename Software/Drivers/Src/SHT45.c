@@ -10,17 +10,7 @@
 // Initialize variables
 I2C_HandleTypeDef hi2c1;
 
-uint8_t TX_Buffer[1] = {0xFD}; // Data to send to request reading from humidity sensor
-
-uint16_t temp_ticks;  // raw temp data received from SHT45
-uint8_t temp_degC;    // temp value in celsius
-uint16_t rh_ticks;    // raw rh data received from SHT45
-uint8_t rh_percentRH; // rh value as percentage
-
-uint16_t checksum_temp;            // checksum for temp received from SHT45
-uint16_t checksum_rh;              // checksum for rh received from SHT45
-const uint16_t crc_poly = 0x31;    // polynomial used to calculate checksum for SHT45 (from datasheet)
-const uint16_t crc_initial = 0xFF; // initial CRC value for SHT45 (from datasheet)
+uint8_t TX_Buffer[1] = {SHT45_I2C_ADDRESS}; // Data to send to request reading from humidity sensor
 
 enum SHT45_CRC_Result // potential values for CRC result for SHT45
 {
@@ -84,8 +74,8 @@ void MX_I2C1_Init(void)
 struct SHT45_Poll_Result poll_SHT45(void)
 {
     // reset temp/rh vars
-    temp_ticks = 0;
-    rh_ticks = 0;
+    uint16_t temp_ticks = 0;
+    uint16_t rh_ticks = 0;
     uint8_t RX_Buffer[6] = {0}; // Data received from humidity sensor
 
     HAL_I2C_Master_Transmit(&hi2c1, (uint16_t)(0x44 << 1), TX_Buffer, sizeof TX_Buffer, 1000); // Sending in Blocking mode
@@ -94,11 +84,11 @@ struct SHT45_Poll_Result poll_SHT45(void)
 
     // parse received data for temperature
     temp_ticks = (RX_Buffer[0] * 256) + RX_Buffer[1];
-    temp_degC = (-45 + (175 * temp_ticks / 65535));
+    uint8_t temp_degC = (-45 + (175 * temp_ticks / 65535));
 
     // parse received data for relative humidity
     rh_ticks = (RX_Buffer[3] * 256) + RX_Buffer[4];
-    rh_percentRH = (-6 + (125 * rh_ticks / 65535));
+    uint8_t rh_percentRH = (-6 + (125 * rh_ticks / 65535));
 
     // if percent rh is < 0, set to 0. if percent rh is > 100, set to 100 (expected behavior from SHT45 datasheet)
     if (rh_percentRH < 0)
@@ -134,8 +124,8 @@ struct SHT45_Poll_Result poll_SHT45(void)
 // calculate and verify CRC-8 for the SHT45 humidity sensor
 static enum SHT45_CRC_Result SHT45_CRC(uint8_t RX_Buffer[6])
 {
-    checksum_temp = 0;
-    checksum_rh = 0;
+    uint16_t checksum_temp = 0;
+    uint16_t checksum_rh = 0;
     uint8_t computed_temp_crc;
     uint8_t computed_rh_crc;
     enum SHT45_CRC_Result SHT45_valid = INVALID; // set result to INVALID by default
@@ -151,7 +141,7 @@ static enum SHT45_CRC_Result SHT45_CRC(uint8_t RX_Buffer[6])
     // manually implemented using algo at https://www.st.com/resource/en/application_note/an4187-using-the-crc-peripheral-on-stm32-microcontrollers-stmicroelectronics.pdf
     // sequentially (thanks chatgpt :D) - do the crc for first byte first and then use that val as input data for the crc for second byte and should give you proper value, verify this with what we actually recieve from the sensor
 
-    computed_temp_crc = crc_initial ^ RX_Buffer[0]; // 1st step of CRC for 1st temp byte
+    computed_temp_crc = SHT45_CRC_INITIAL ^ RX_Buffer[0]; // 1st step of CRC for 1st temp byte
 
     // calc crc for first byte
     for (uint8_t bindex = 0; bindex < sizeof(RX_Buffer[0]) * 8; bindex++)
@@ -160,7 +150,7 @@ static enum SHT45_CRC_Result SHT45_CRC(uint8_t RX_Buffer[6])
 
         if (MSB == 1)
         {
-            computed_temp_crc = (computed_temp_crc << 1) ^ crc_poly; // shift one bit left, XOR with poly
+            computed_temp_crc = (computed_temp_crc << 1) ^ SHT45_CRC_POLY; // shift one bit left, XOR with poly
         }
         else
         {
@@ -177,7 +167,7 @@ static enum SHT45_CRC_Result SHT45_CRC(uint8_t RX_Buffer[6])
 
         if (MSB == 1)
         {
-            computed_temp_crc = (computed_temp_crc << 1) ^ crc_poly; // shift one bit left, XOR with poly
+            computed_temp_crc = (computed_temp_crc << 1) ^ SHT45_CRC_POLY; // shift one bit left, XOR with poly
         }
         else
         {
@@ -188,7 +178,7 @@ static enum SHT45_CRC_Result SHT45_CRC(uint8_t RX_Buffer[6])
     // same calulcation for rh bytes
     checksum_rh = RX_Buffer[5];
 
-    computed_rh_crc = crc_initial ^ RX_Buffer[3]; // 1st step of CRC for 1st rh byte
+    computed_rh_crc = SHT45_CRC_INITIAL ^ RX_Buffer[3]; // 1st step of CRC for 1st rh byte
 
     // calc crc for first byte
     for (uint8_t bindex = 0; bindex < sizeof(RX_Buffer[3]) * 8; bindex++)
@@ -197,7 +187,7 @@ static enum SHT45_CRC_Result SHT45_CRC(uint8_t RX_Buffer[6])
 
         if (MSB == 1)
         {
-            computed_rh_crc = (computed_rh_crc << 1) ^ crc_poly; // shift one bit left, XOR with poly
+            computed_rh_crc = (computed_rh_crc << 1) ^ SHT45_CRC_POLY; // shift one bit left, XOR with poly
         }
         else
         {
@@ -214,7 +204,7 @@ static enum SHT45_CRC_Result SHT45_CRC(uint8_t RX_Buffer[6])
 
         if (MSB == 1)
         {
-            computed_rh_crc = (computed_rh_crc << 1) ^ crc_poly; // shift one bit left, XOR with poly
+            computed_rh_crc = (computed_rh_crc << 1) ^ SHT45_CRC_POLY; // shift one bit left, XOR with poly
         }
         else
         {

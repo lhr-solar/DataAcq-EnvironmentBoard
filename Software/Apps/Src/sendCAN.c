@@ -8,6 +8,7 @@
 #include "main.h"
 #include "CAN.h"
 #include "stm32xx_hal.h"
+#include "sendCAN.h"
 
 // Initialize variables
 uint8_t tx_data[8]; // CAN transmission payload
@@ -55,7 +56,7 @@ void send_payload_CAN(uint8_t final_temp, uint8_t final_rh)
 {
     // create CAN payload to send data on DataAcq CAN bus
     CAN_TxHeaderTypeDef tx_header = {0};
-    tx_header.StdId = 0x200; // base address of environment board (starts at x200) - TODO: put in header file for portability?
+    tx_header.StdId = ENV_BASE_ADDRESS; // base address of environment board (starts at x200) - TODO: put in header file for portability?
     tx_header.RTR = CAN_RTR_DATA;
     tx_header.IDE = CAN_ID_STD;
     tx_header.DLC = 2;
