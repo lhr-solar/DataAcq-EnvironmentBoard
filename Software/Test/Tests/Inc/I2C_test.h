@@ -10,8 +10,8 @@ extern "C"
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
 
-  /* Exported functions prototypes ---------------------------------------------*/
-  void Error_Handler(void);
+/* Exported functions prototypes ---------------------------------------------*/
+void Error_Handler(void);
 
 /* Private defines -----------------------------------------------------------*/
 // I2C pin definitions (for nucleo - may need to change/make adaptable?)
